@@ -1,0 +1,77 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.brianr.himasifmobile.RandomFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="RANDOM"
+        android:textColor="#000"
+        android:textSize="30dp" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/jmlMhs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="30dp"
+        android:hint="Jumlah Mahasiswa"
+        android:inputType="number"
+        app:met_floatingLabel="highlight" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/jmlKlp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jmlMhs"
+        android:layout_marginTop="20dp"
+        android:hint="Jumlah Kelompok"
+        android:inputType="number"
+        app:met_floatingLabel="highlight" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/jmlAgt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jmlKlp"
+        android:layout_marginTop="20dp"
+        android:hint="Jumlah Anggota"
+        android:inputType="number"
+        app:met_floatingLabel="highlight" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/jmlSisa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jmlAgt"
+        android:layout_marginTop="20dp"
+        android:hint="Jumlah Sisa"
+        android:inputType="number"
+        app:met_floatingLabel="highlight" />
+
+    <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
+        android:id="@+id/random_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/jmlSisa"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button"
+        android:text="Random"
+        android:layout_centerHorizontal="true"
+        app:spinning_bar_width="4dp"
+        app:spinning_bar_padding="6dp"
+        android:textColor="#FFF" />
+    </RelativeLayout>
+
+</ScrollView>

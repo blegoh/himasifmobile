@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">HimasifMobile</string>
+    <string name="title_home">Home</string>
+    <string name="title_nimchecker">Nimchecker</string>
+    <string name="title_random">Random</string>
+    <string name="title_other">Other</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_text_1">Info Himasif</string>
+    <string name="tab_text_2">Artikel</string>
+    <string name="tab_text_3">Info Lowongan</string>
+</resources>
