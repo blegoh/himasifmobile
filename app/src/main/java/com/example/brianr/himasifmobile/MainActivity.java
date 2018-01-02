@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     Animation frombottom;
     RelativeLayout layout, fragment;
     TextView textView;
+    //brian
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
