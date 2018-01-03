@@ -1,6 +1,7 @@
 package com.example.brianr.himasifmobile;
 
 import android.app.Activity;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,9 @@ public class TambahListAdapter extends BaseAdapter{
     private Activity activity;
     private LayoutInflater inflater;
     private List<model>modelList;
+    Typeface tf1;
+    TextView nama, nim;
+
 
     public TambahListAdapter(Activity activity, List<model> modelList) {
         this.activity = activity;
@@ -41,11 +45,15 @@ public class TambahListAdapter extends BaseAdapter{
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View v = View.inflate(activity,R.layout.list_nim,null);
-        TextView nama = (TextView)v.findViewById(R.id.nama);
-        TextView nim = (TextView)v.findViewById(R.id.nim);
+        nama = (TextView)v.findViewById(R.id.nama);
+        nim = (TextView)v.findViewById(R.id.nim);
         model m = modelList.get(position);
         nama.setText(m.getNama());
         nim.setText(m.getNim());
+        tf1 = Typeface.createFromAsset(v.getResources().getAssets(),"fonts/Roboto-Regular.ttf");
+        nama.setTypeface(tf1);
+        tf1 = Typeface.createFromAsset(v.getResources().getAssets(),"fonts/Athena of the Ocean.ttf");
+        nim.setTypeface(tf1);
         v.setTag(m.getId());
         return v;
     }

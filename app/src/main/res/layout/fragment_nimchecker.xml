@@ -33,7 +33,7 @@
         android:layout_below="@+id/btn_cari"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="31dp"
-        android:background="#E8F1F5"
+        android:background="#ecf0f1"
         android:divider="#d1d1d1"
         android:dividerHeight="10dp">
 
