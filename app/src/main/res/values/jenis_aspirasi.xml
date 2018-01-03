@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Jenis_Aspirasi">
+        <item>Fasilitas</item>
+        <item>Kurikulum</item>
+        <item>Pelayanan</item>
+        <item>Ormawa</item>
+    </string-array>
+</resources>
