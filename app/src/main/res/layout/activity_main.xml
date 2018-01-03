@@ -28,13 +28,13 @@
         <RelativeLayout
             android:id="@+id/fragment"
             android:layout_width="340dp"
-            android:layout_height="530dp"
-            android:layout_alignParentBottom="true"
+            android:layout_height="485dp"
+            android:layout_marginTop="80dp"
             android:layout_centerHorizontal="true"
+
             android:background="@drawable/shape">
 
         </RelativeLayout>
-
         <android.support.design.widget.BottomNavigationView
             android:id="@+id/navigation"
             android:layout_width="match_parent"
@@ -42,5 +42,6 @@
             android:layout_alignParentBottom="true"
             android:background="?android:attr/windowBackground"
             app:menu="@menu/navigation" />
+
     </RelativeLayout>
 </RelativeLayout>

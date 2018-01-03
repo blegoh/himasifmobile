@@ -16,7 +16,8 @@
         android:columnWidth="150dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:stretchMode="spacingWidthUniform">
+        android:stretchMode="spacingWidthUniform"
+        android:paddingBottom="10dp">
 
     </GridView>
 
