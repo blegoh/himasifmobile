@@ -12,6 +12,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import me.anwarshahriar.calligrapher.Calligrapher;
+
 public class MainActivity extends AppCompatActivity {
     AnimationDrawable animationDrawable;
     Animation frombottom;
@@ -67,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Calligrapher calligrapher = new Calligrapher(this);
+        calligrapher.setFont(this,"fonts/Roboto-Regular.ttf",true);
         layout = (RelativeLayout) findViewById(R.id.layout);
         fragment = (RelativeLayout) findViewById(R.id.fragment);
         frombottom = AnimationUtils.loadAnimation(this, R.anim.frombottom);
