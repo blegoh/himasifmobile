@@ -39,6 +39,9 @@ public class HimasifToday1Fragment extends Fragment {
         list.add(new model2(3,R.drawable.ic_home_black_24dp,"HIMASIF"));
         list.add(new model2(4,R.drawable.ic_home_black_24dp,"HIMASIF"));
         list.add(new model2(5,R.drawable.ic_home_black_24dp,"HIMASIF"));
+        list.add(new model2(6,R.drawable.ic_home_black_24dp,"HIMASIF"));
+        list.add(new model2(7,R.drawable.ic_home_black_24dp,"HIMASIF"));
+        list.add(new model2(8,R.drawable.ic_home_black_24dp,"HIMASIF"));
 
 
         adapter = new TambahGridAdapter(getActivity(),list);
