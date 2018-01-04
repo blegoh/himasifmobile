@@ -11,7 +11,8 @@
         android:textSize="17dp"
         android:textColor="#000"
         android:id="@+id/nama"
-        android:textAllCaps="true"/>
+        android:textAllCaps="true"
+        android:fontFamily="@font/Roboto_Regular"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,6 +21,7 @@
         android:layout_below="@+id/nama"
         android:textSize="15dp"
         android:textColor="#000"
-        android:id="@+id/nim"/>
+        android:id="@+id/nim"
+        android:fontFamily="@font/Roboto_Regular"/>
 
 </RelativeLayout>
