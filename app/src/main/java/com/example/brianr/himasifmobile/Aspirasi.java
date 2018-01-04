@@ -15,7 +15,6 @@ public class Aspirasi extends AppCompatActivity {
     RelativeLayout layout;
     Button kirim;
     Spinner kategori,jenis_aspirasi;
-    //a
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
