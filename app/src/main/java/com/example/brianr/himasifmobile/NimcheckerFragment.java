@@ -4,6 +4,7 @@ package com.example.brianr.himasifmobile;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -69,6 +71,18 @@ public class NimcheckerFragment extends Fragment {
 
 
         listView = (ListView)view.findViewById(R.id.nimchecker);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                model m = models.get(position);
+                String result = m.getNama()+"\n"+m.getNim()+"\n\nCopyright \u00a9 HIMASIF UNEJ";
+                Intent shareTo = new Intent(Intent.ACTION_SEND);
+                shareTo.setType("text/plain");
+                shareTo.putExtra(Intent.EXTRA_TEXT,result);
+
+                startActivity(Intent.createChooser(shareTo, "Share to"));
+            }
+        });
 
         return view;
     }
