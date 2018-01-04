@@ -2,36 +2,58 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.brianr.himasifmobile.PengurusHimasif"
     android:background="@drawable/bg_animation"
-    android:id="@+id/layout">
+    tools:context="com.example.brianr.himasifmobile.PengurusHimasif">
+
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="23dp"
-        android:background="@mipmap/himasif1"/>
+        android:background="@mipmap/himasif1" />
+
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PENGURUS HIMASIF"
-        android:textSize="25dp"
         android:layout_marginLeft="90dp"
         android:layout_marginTop="30dp"
-        android:textColor="#FFF"/>
+        android:text="PENGURUS HIMASIF"
+        android:textColor="#FFF"
+        android:textSize="25dp" />
+
     <RelativeLayout
         android:layout_width="340dp"
         android:layout_height="400dp"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/shape"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"
-        android:background="@drawable/shape">
+        tools:layout_editor_absoluteY="0dp">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="290dp"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp">
+
+        </android.support.v4.view.ViewPager>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewPager"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="SLIDE UNTUK MELIHAT"
+            android:textSize="15dp"
+            android:textColor="#000" />
 
     </RelativeLayout>
 
