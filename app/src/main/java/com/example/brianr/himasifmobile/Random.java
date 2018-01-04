@@ -11,8 +11,10 @@ public class Random {
     int jumlah;
     int kelompok;
     int setiap;
+    String matkul;
 
-    public Random(int jumlah, int kelompok, int setiap, int sisa) {
+    public Random(String matkul,int jumlah, int kelompok, int setiap, int sisa) {
+        this.matkul=matkul;
         this.sisa = sisa;
         this.jumlah = jumlah;
         this.kelompok = kelompok;
@@ -30,10 +32,11 @@ public class Random {
                 a.add(i + 1);
             }
             int num = 1;
-            Result.append("Jumlah Mahasiswa       : " + a.size()+"\n");
-            Result.append("Jumlah Kelompok        : " + kelompok+"\n");
-            Result.append("Jumlah Setiap Kelompok : " + setiap+"\n");
-            Result.append("Sisa Anggota Kelompok  : " + sisa+"\n\n");
+            Result.append("Nama Matkul\t : "+matkul+"\n");
+            Result.append("Jumlah Mahasiswa\t : " + a.size()+"\n");
+            Result.append("Jumlah Kelompok\t : " + kelompok+"\n");
+            Result.append("Jumlah Setiap Kelompok\t : " + setiap+"\n");
+            Result.append("Sisa Anggota Kelompok\t : " + sisa+"\n\n");
 //            Result.append("\n------------------------------\n");
             if (sisa > 0) {
                 for (int i = num; i <= sisa; i++) {

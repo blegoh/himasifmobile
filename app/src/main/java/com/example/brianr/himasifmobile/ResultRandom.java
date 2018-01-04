@@ -17,6 +17,7 @@ public class ResultRandom extends AppCompatActivity {
     private TextView textView;
     private Button share,rerandom;
     private int jumlah_mahasiswa,jumlah_kelompok,jumlah_anggota,jumlah_sisa;
+    private String namaMatkul;
     private ScrollView scroll_view;
 
     @Override
@@ -31,12 +32,13 @@ public class ResultRandom extends AppCompatActivity {
 
         Intent i = getIntent();
         Bundle EXTRA = i.getExtras();
+        namaMatkul=EXTRA.getString("matkul");
         jumlah_mahasiswa = EXTRA.getInt("jumlah_mahasiswa");
         jumlah_kelompok = EXTRA.getInt("jumlah_kelompok");
         jumlah_anggota = EXTRA.getInt("jumlah_anggota");
         jumlah_sisa = EXTRA.getInt("jumlah_sisa");
 
-        RESULT = new Random(jumlah_mahasiswa, jumlah_kelompok, jumlah_anggota, jumlah_sisa).hitung().toString();
+        RESULT = new Random(namaMatkul,jumlah_mahasiswa, jumlah_kelompok, jumlah_anggota, jumlah_sisa).hitung().toString();
 
         textView = (TextView) findViewById(R.id.textView);
         textView.setText(RESULT);
@@ -49,7 +51,7 @@ public class ResultRandom extends AppCompatActivity {
         rerandom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                RESULT = new Random(jumlah_mahasiswa, jumlah_kelompok, jumlah_anggota, jumlah_sisa).hitung().toString();
+                RESULT = new Random(namaMatkul,jumlah_mahasiswa, jumlah_kelompok, jumlah_anggota, jumlah_sisa).hitung().toString();
                 textView.setText(RESULT);
                 scroll_view.fullScroll(ScrollView.FOCUS_UP);
             }

@@ -22,6 +22,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
+import com.rengwuxian.materialedittext.MaterialEditText;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -43,7 +44,7 @@ public class NimcheckerFragment extends Fragment {
     private TambahListAdapter adapter;
     private List<model>models;
     private Button btnCari;
-    private EditText search;
+    private MaterialEditText search;
 
     public NimcheckerFragment() {
         // Required empty public constructor
@@ -55,7 +56,7 @@ public class NimcheckerFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_nimchecker, container, false);
         btnCari=(Button)view.findViewById(R.id.btn_cari);
-        search=(EditText)view.findViewById(R.id.search);
+        search=(MaterialEditText) view.findViewById(R.id.search);
         search.requestFocus();
 
         btnCari.setOnClickListener(new View.OnClickListener() {

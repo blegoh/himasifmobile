@@ -19,13 +19,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:ignore="MissingConstraints">
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/matkul"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/title"
+                    android:layout_marginTop="30dp"
+                    android:ems="10"
+                    android:hint="Nama MataKuliah"
+                    app:met_floatingLabel="highlight" />
 
                 <com.rengwuxian.materialedittext.MaterialEditText
                     android:id="@+id/jmlMhs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:layout_below="@+id/title"
+                    android:layout_below="@+id/matkul"
                     android:layout_marginTop="30dp"
                     android:ems="10"
                     android:hint="Jumlah Mahasiswa"

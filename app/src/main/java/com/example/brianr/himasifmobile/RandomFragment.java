@@ -24,8 +24,9 @@ import br.com.simplepass.loading_button_lib.customViews.CircularProgressButton;
  */
 public class RandomFragment extends Fragment {
     Button random, reset;
+    private String namaMatkul;
     private int jumlah_mahasiswa, jumlah_kelompok, jumlah_anggota, jumlah_sisa;
-    private MaterialEditText mahasiswa, kelompok, anggota, sisa;
+    private MaterialEditText mahasiswa, kelompok, anggota, sisa, matkul;
     private TextWatcher watcher_k, watcher_a;
     ScrollView scroll;
 
@@ -39,7 +40,8 @@ public class RandomFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_random, container, false);
-        scroll = (ScrollView)view.findViewById(R.id.scroll);
+        scroll = (ScrollView) view.findViewById(R.id.scroll);
+        matkul = (MaterialEditText)view.findViewById(R.id.matkul);
         mahasiswa = (MaterialEditText) view.findViewById(R.id.jmlMhs);
         kelompok = (MaterialEditText) view.findViewById(R.id.jmlKlp);
         anggota = (MaterialEditText) view.findViewById(R.id.jmlAgt);
@@ -57,6 +59,7 @@ public class RandomFragment extends Fragment {
                 if (!kelompok.getText().toString().equals("") && !kelompok.getText().toString().equals("0") && !mahasiswa.getText().toString().equals("")) {
                     jumlah_mahasiswa = Integer.parseInt(mahasiswa.getText().toString());
                     jumlah_kelompok = Integer.parseInt(kelompok.getText().toString());
+                    namaMatkul=matkul.getText().toString();
 
                     jumlah_anggota = jumlah_mahasiswa / jumlah_kelompok;
                     jumlah_sisa = jumlah_mahasiswa % jumlah_kelompok;
@@ -124,6 +127,7 @@ public class RandomFragment extends Fragment {
                     return;
                 }
                 Bundle EXTRA = new Bundle();
+                EXTRA.putString("matkul",namaMatkul);
                 EXTRA.putInt("jumlah_mahasiswa", jumlah_mahasiswa);
                 EXTRA.putInt("jumlah_kelompok", jumlah_kelompok);
                 EXTRA.putInt("jumlah_anggota", jumlah_anggota);
@@ -136,6 +140,7 @@ public class RandomFragment extends Fragment {
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                matkul.setText("");
                 mahasiswa.setText("");
                 kelompok.setText("");
                 anggota.setText("");

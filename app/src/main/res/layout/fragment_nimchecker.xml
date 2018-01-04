@@ -2,18 +2,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.brianr.himasifmobile.NimcheckerFragment">
 
 
-    <EditText
-
+    <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/search"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/title"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:hint="Masukkan NIM / Nama" />
+        android:hint="Masukkan NIM / Nama"
+        app:met_floatingLabel="highlight"/>
 
     <Button
         android:id="@+id/btn_cari"
