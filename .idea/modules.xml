@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\Android\GithubDekstop\forkhimasifmobile\himasifmobile\app\app.iml" filepath="E:\Android\GithubDekstop\forkhimasifmobile\himasifmobile\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/himasifmobile.iml" filepath="$PROJECT_DIR$/himasifmobile.iml" />
+      <module fileurl="file://E:\Android\GithubDekstop\forkhimasifmobile\himasifmobile\himasifmobile.iml" filepath="E:\Android\GithubDekstop\forkhimasifmobile\himasifmobile\himasifmobile.iml" />
     </modules>
   </component>
 </project>
