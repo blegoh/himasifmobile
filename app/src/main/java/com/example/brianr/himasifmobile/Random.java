@@ -1,5 +1,7 @@
 package com.example.brianr.himasifmobile;
 
+import android.text.Html;
+
 import java.util.ArrayList;
 
 /**
@@ -65,7 +67,7 @@ public class Random {
                 }
                 Result.append("\n");
             }
-
+            Result.append(Html.fromHtml("<b>Copyright \u00a9 HIMASIF UNEJ</b>"));
 //            Long Ed = System.nanoTime();
 //            Result.append("\n\n------------------------------\n\n");
 //            String time = String.format("Time Case : %.3f Seconds \n",(float)(Ed - St) / 1000000000);
