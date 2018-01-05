@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.brianr.himasifmobile">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -28,7 +29,8 @@
         <activity android:name=".Aspirasi" />
         <activity android:name=".PengurusHimasif" />
         <activity android:name=".VisiMisi" />
-        <activity android:name=".TentangKami"></activity>
+        <activity android:name=".TentangKami" />
+        <activity android:name=".GridAcvtivity"></activity>
     </application>
 
 </manifest>
