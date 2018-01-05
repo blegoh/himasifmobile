@@ -16,7 +16,7 @@
         android:layout_centerHorizontal="true"
         android:text="Judul"
         android:textColor="#000"
-        android:textSize="20dp"
+        android:textSize="15dp"
         android:id="@+id/judul"
         android:fontFamily="@font/roboto_regular"/>
 </RelativeLayout>
