@@ -27,7 +27,7 @@ public class PengurusHimasif extends AppCompatActivity {
         viewPager = (ViewPager)findViewById(R.id.viewPager);
         adapter = new SliderAdapter(this);
         viewPager.setAdapter(adapter);
-        
+
 
     }
 }
