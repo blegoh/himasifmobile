@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/viewPager"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:text="SLIDE UNTUK MELIHAT"
             android:textSize="15dp"
             android:textColor="#000" />
