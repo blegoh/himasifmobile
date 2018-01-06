@@ -35,7 +35,7 @@
         <Spinner
             android:layout_marginTop="10dp"
             android:id="@+id/kategori"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true">
 
@@ -43,7 +43,7 @@
         <Spinner
             android:layout_marginTop="20dp"
             android:id="@+id/jenis_aspirasi"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/kategori">

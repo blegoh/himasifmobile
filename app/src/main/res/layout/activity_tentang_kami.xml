@@ -66,7 +66,8 @@
 \n\nPutusan kedua yaitu hasil sidang istimewa HIMASIF pertama yang mengesahkan M. Fajrul Falah sebagai ketua HIMASIF, Dara Faradisha sebagai sekeretaris umum, dan Raditya Andre sebagai bendahara Umum hasil voting 55 mahasiswa Program Studi Sistem Informasi angkatan pertama.
 \n\nHal ini kemudian dilegalisasi dengan terbitnya surat keputusan ketua Program Studi Sistem Informasi Universitas Jember nomor 26/H25.1.15/KM.10/2009."
 
-                    android:textColor="#000000" />
+                    android:textColor="#000000"
+                    android:fontFamily="@font/roboto_regular"/>
 
             </RelativeLayout>
         </ScrollView>

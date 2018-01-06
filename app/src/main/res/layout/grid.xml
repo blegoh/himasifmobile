@@ -6,11 +6,13 @@
     android:background="@drawable/bg_grid"
     android:padding="5dp">
     <ImageView
+        android:layout_marginTop="7dp"
         android:layout_width="150dp"
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:id="@+id/image"/>
     <TextView
+        android:layout_marginTop="7dp"
         android:layout_width="wrap_content"
         android:layout_height="65dp"
         android:layout_below="@+id/image"
@@ -19,7 +21,7 @@
         android:maxLines="3"
         android:ellipsize="end"
         android:textColor="#000"
-        android:textSize="15dp"
+        android:textSize="14dp"
         android:id="@+id/judul"
         android:fontFamily="@font/roboto_regular"/>
 </RelativeLayout>
