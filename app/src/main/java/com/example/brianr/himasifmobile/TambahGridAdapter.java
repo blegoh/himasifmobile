@@ -9,6 +9,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 /**
@@ -46,7 +48,12 @@ public class TambahGridAdapter extends BaseAdapter {
         model2 m = list.get(position);
         ImageView image = (ImageView)view.findViewById(R.id.image);
         TextView judul = (TextView)view.findViewById(R.id.judul);
-        image.setImageResource(m.getImage());
+
+        Glide
+        .with(activity)
+        .load(m.getImage())
+        .crossFade()
+        .into(image);
         judul.setText(m.getText());
         view.setTag(m.getId());
         return view;
