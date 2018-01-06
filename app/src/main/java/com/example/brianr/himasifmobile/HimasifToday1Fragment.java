@@ -103,7 +103,7 @@ public class HimasifToday1Fragment extends Fragment {
                     @Override
                     public void onResponse(String response) {
                         Log.d(String.valueOf(getActivity()), response.toString());
-                        hidePDialog();
+
 
                         // Parsing json
                         list =gson.fromJson(response, new TypeToken<List<Post>>(){}.getType());
@@ -117,6 +117,7 @@ public class HimasifToday1Fragment extends Fragment {
                             model2 item = new model2(post.getId(),image,Html.fromHtml(post.getTitle().getRendered()).toString());
                             mlist.add(item);
                         }
+                        hidePDialog();
                         adapter.notifyDataSetChanged();
                     }
                 }, new Response.ErrorListener() {
