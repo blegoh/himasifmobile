@@ -5,13 +5,16 @@ package com.example.brianr.himasifmobile;
  */
 
 public class model2 {
-    private int id,image;
-    private String text;
+    private int id;
+    private String text,image;
 
-    public model2(int id, int image, String text) {
+    public model2(int id, String image, String text) {
         this.id = id;
         this.image = image;
         this.text = text;
+    }
+    public model2(){
+
     }
 
     public int getId() {
@@ -22,11 +25,11 @@ public class model2 {
         this.id = id;
     }
 
-    public int getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(int image) {
+    public void setImage(String image) {
         this.image = image;
     }
 
@@ -37,4 +40,5 @@ public class model2 {
     public void setText(String text) {
         this.text = text;
     }
+
 }

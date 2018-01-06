@@ -2,6 +2,7 @@ package com.example.brianr.himasifmobile;
 
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -22,33 +23,40 @@ public class HomeFragment extends Fragment {
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
-    public HomeFragment() {
-        // Required empty public constructor
-    }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        viewPager = (ViewPager)view.findViewById(R.id.viewContainer);
-        setupViewPager(viewPager);
-
-        TabLayout tabLayout = (TabLayout)view.findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(viewPager);
+        setRetainInstance(true);
         return view;
     }
-    private void setupViewPager(ViewPager viewPager){
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getFragmentManager());
-        adapter.addFragment(new HimasifToday1Fragment(),"Info Himasif");
-        adapter.addFragment(new HimasifToday2Fragment(),"Artikel");
-        adapter.addFragment(new HimasifToday3Fragment(),"Info Lowongan");
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        viewPager = (ViewPager) view.findViewById(R.id.viewContainer);
+        viewPager.setOffscreenPageLimit(3);
+        setupViewPager(viewPager);
+
+        TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(viewPager);
+       /* ViewPagerAdapter adapter = new ViewPagerAdapter(getFragmentManager());
+        adapter.addFragment(new HimasifToday1Fragment(),"Info Himasif");*/
+
+    }
+
+    private void setupViewPager(ViewPager viewPager) {
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
+        adapter.addFragment(new HimasifToday1Fragment(), "Info Himasif");
+        adapter.addFragment(new HimasifToday2Fragment(), "Artikel");
+        adapter.addFragment(new HimasifToday3Fragment(), "Info Lowongan");
         viewPager.setAdapter(adapter);
     }
+
     class ViewPagerAdapter extends FragmentPagerAdapter {
         private final List<Fragment> mFragmentsList = new ArrayList<>();
-        private final List<String>mFragmentTitleList = new ArrayList<>();
+        private final List<String> mFragmentTitleList = new ArrayList<>();
 
         public ViewPagerAdapter(FragmentManager manager) {
             super(manager);
@@ -63,10 +71,12 @@ public class HomeFragment extends Fragment {
         public int getCount() {
             return mFragmentsList.size();
         }
-        public void addFragment(Fragment fragment,String title){
+
+        public void addFragment(Fragment fragment, String title) {
             mFragmentsList.add(fragment);
             mFragmentTitleList.add(title);
         }
+
         public CharSequence getPageTitle(int position) {
             return mFragmentTitleList.get(position);
         }

@@ -1,10 +1,10 @@
 package com.example.brianr.himasifmobile;
 
-import android.app.FragmentTransaction;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.animation.Animation;
@@ -20,48 +20,61 @@ public class MainActivity extends AppCompatActivity {
     RelativeLayout layout, fragment;
     TextView textView;
 
+    Fragment home,random,other,nim;
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            Fragment fragment = null;
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    textView = (TextView)findViewById(R.id.title);
+                    textView = (TextView) findViewById(R.id.title);
                     textView.setText("HIMASIF TODAY");
-                    HomeFragment homeFragment = new HomeFragment();
-                    android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.fragment, homeFragment);
-                    fragmentTransaction.commit();
-                    return true;
+
+                    fragment = home;
+                    if (fragment == null) {
+                        home = new HomeFragment();
+                    }
+                    break;
                 case R.id.navigation_nimchecker:
-                    textView = (TextView)findViewById(R.id.title);
+                    textView = (TextView) findViewById(R.id.title);
                     textView.setText("NIMCHECKER");
-                    NimcheckerFragment nimcheckerFragment = new NimcheckerFragment();
-                    android.support.v4.app.FragmentTransaction fragmentTransaction1 = getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction1.replace(R.id.fragment, nimcheckerFragment);
-                    fragmentTransaction1.commit();
-                    return true;
+
+                    fragment = nim;
+                    if (fragment == null) {
+                        nim = new NimcheckerFragment();
+                        fragment = nim;
+                    }
+                    break;
                 case R.id.navigation_random:
-                    textView = (TextView)findViewById(R.id.title);
+                    textView = (TextView) findViewById(R.id.title);
                     textView.setText("RANDOM");
-                    RandomFragment randomFragment = new RandomFragment();
-                    android.support.v4.app.FragmentTransaction fragmentTransaction2 = getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction2.replace(R.id.fragment, randomFragment);
-                    fragmentTransaction2.commit();
-                    return true;
+
+                    fragment = random;
+                    if (fragment == null) {
+                        random = new RandomFragment();
+                        fragment = random;
+                    }
+                    break;
                 case R.id.navigation_other:
-                    textView = (TextView)findViewById(R.id.title);
+                    textView = (TextView) findViewById(R.id.title);
                     textView.setText("HIMASIF MOBILE");
-                    OtherFragment otherFragment = new OtherFragment();
-                    android.support.v4.app.FragmentTransaction fragmentTransaction3 = getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction3.replace(R.id.fragment, otherFragment);
-                    fragmentTransaction3.commit();
-                    return true;
+
+                    fragment = other;
+                    if (fragment == null) {
+                        other = new OtherFragment();
+                        fragment = other;
+                    }
+                    break;
 
             }
-            return false;
+
+            if(fragment!=null)
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment,fragment).commit();
+            return fragment!=null;
         }
     };
 
@@ -70,12 +83,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Calligrapher calligrapher = new Calligrapher(this);
-        calligrapher.setFont(this,"fonts/Roboto-Regular.ttf",true);
+        calligrapher.setFont(this, "fonts/Roboto-Regular.ttf", true);
         layout = (RelativeLayout) findViewById(R.id.layout);
         fragment = (RelativeLayout) findViewById(R.id.fragment);
         frombottom = AnimationUtils.loadAnimation(this, R.anim.frombottom);
         fragment.setAnimation(frombottom);
-        textView = (TextView)findViewById(R.id.title);
+        textView = (TextView) findViewById(R.id.title);
         textView.setText("HIMASIF TODAY");
         HomeFragment homeFragment = new HomeFragment();
         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
