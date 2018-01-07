@@ -29,7 +29,7 @@
         android:translationZ="10dp"
         android:paddingTop="50dp"
         android:textColor="#FFF"
-        android:text="TENTANG KAMI"/>
+        android:text="TENTANG \nKAMI"/>
     <Button
         android:id="@+id/pengurus"
         android:layout_width="wrap_content"

@@ -30,7 +30,7 @@
         <activity android:name=".PengurusHimasif" />
         <activity android:name=".VisiMisi" />
         <activity android:name=".TentangKami" />
-        <activity android:name=".GridAcvtivity"></activity>
+        <activity android:name=".GridAcvtivity" />
     </application>
 
 </manifest>
