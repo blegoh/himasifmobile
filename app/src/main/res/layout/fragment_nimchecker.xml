@@ -20,9 +20,9 @@
         android:id="@+id/btn_cari"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/title"
+        android:layout_below="@id/search"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/button"
         android:text="Cari"
         android:textColor="#FFF" />
