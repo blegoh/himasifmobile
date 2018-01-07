@@ -25,11 +25,11 @@ public class Aspirasi extends AppCompatActivity {
         animationDrawable.setExitFadeDuration(4500);
         animationDrawable.start();
         kategori = (Spinner)findViewById(R.id.kategori);
-        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(getApplicationContext(), R.array.Kategori, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(Aspirasi.this, R.array.Kategori, android.R.layout.simple_spinner_item);
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         kategori.setAdapter(adapter1);
         jenis_aspirasi = (Spinner)findViewById(R.id.jenis_aspirasi);
-        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(getApplicationContext(), R.array.Jenis_Aspirasi, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(Aspirasi.this, R.array.Jenis_Aspirasi, android.R.layout.simple_spinner_item);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         jenis_aspirasi.setAdapter(adapter2);
         aspirasi = (EditText) findViewById(R.id.aspirasi);

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Pengurus">
+        <item>Semua</item>
+        <item>PH</item>
+        <item>PSDM</item>
+        <item>LITBANG</item>
+        <item>HUMAS</item>
+        <item>MEDIATEK</item>
+    </string-array>
+</resources>
