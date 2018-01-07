@@ -4,7 +4,7 @@
     android:layout_width="300dp"
     android:layout_height="400dp"
     android:background="@drawable/bg_grid"
-    android:padding="5dp">
+    android:padding="7dp">
     <ImageView
         android:layout_marginTop="7dp"
         android:layout_width="150dp"
@@ -23,5 +23,6 @@
         android:textColor="#000"
         android:textSize="14dp"
         android:id="@+id/judul"
-        android:fontFamily="@font/roboto_regular"/>
+        android:fontFamily="@font/roboto_regular"
+        />
 </RelativeLayout>
