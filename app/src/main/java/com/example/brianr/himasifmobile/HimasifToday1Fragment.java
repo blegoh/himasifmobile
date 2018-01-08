@@ -68,7 +68,6 @@ public class HimasifToday1Fragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
             model2 m = mlist.get(i);
-                Toast.makeText(getActivity(), "clicked on item "+adapter.getItemId(i)+"id post : "+m.getId(), Toast.LENGTH_SHORT).show();
 
                 String id = String.valueOf(m.getId());
                 String title = m.getTitle();
