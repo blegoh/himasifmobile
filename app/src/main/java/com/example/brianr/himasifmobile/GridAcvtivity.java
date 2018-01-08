@@ -37,9 +37,7 @@ public class GridAcvtivity extends AppCompatActivity {
     Gson gson = new Gson();
     AnimationDrawable animationDrawable;
     RelativeLayout layout;
-    Button wa, line, fb,btnShare;
-    Uri uri;
-    String imgurl = "http://www.google.com";
+    Button btnShare;
     private WebView isi;
     private ProgressDialog pDialog;
     private TextView judul,tanggal,sumber;
@@ -89,83 +87,6 @@ public class GridAcvtivity extends AppCompatActivity {
                 startActivity(Intent.createChooser(shareTo, "Share to"));
             }
         });
-
-      /*  uri = Uri.parse("" + imgurl);
-        wa = (Button) findViewById(R.id.whatsapp);
-        wa.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PackageManager pm = getPackageManager();
-                try {
-
-                    Intent waIntent = new Intent(Intent.ACTION_SEND);
-                    waIntent.setType("text/plain");
-                    String text = "Want to share this";
-
-                    PackageInfo info = pm.getPackageInfo("com.whatsapp", PackageManager.GET_META_DATA);
-                    //Check if package exists or not. If not then code
-                    //in catch block will be called
-                    waIntent.setPackage("com.whatsapp");
-                    waIntent.putExtra(waIntent.ACTION_VIEW, uri);
-                    waIntent.putExtra(Intent.EXTRA_TEXT, link);
-                    startActivity(Intent.createChooser(waIntent, "Share with"));
-
-                } catch (PackageManager.NameNotFoundException e) {
-                    Toast.makeText(GridAcvtivity.this, "WhatsApp not Installed", Toast.LENGTH_LONG)
-                            .show();
-                }
-            }
-        });
-        fb = (Button) findViewById(R.id.facebook);
-        fb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PackageManager pm = getPackageManager();
-                try {
-
-                    Intent fbIntent = new Intent(Intent.ACTION_SEND);
-                    fbIntent.setType("text/plain");
-                    String text = "Want to share this";
-
-                    PackageInfo info = pm.getPackageInfo("com.facebook", PackageManager.GET_META_DATA);
-                    //Check if package exists or not. If not then code
-                    //in catch block will be called
-                    fbIntent.setPackage("com.facebook");
-                    fbIntent.putExtra(fbIntent.ACTION_VIEW, uri);
-                    fbIntent.putExtra(Intent.EXTRA_TEXT, text);
-                    startActivity(Intent.createChooser(fbIntent, "Share with"));
-
-                } catch (PackageManager.NameNotFoundException e) {
-                    Toast.makeText(GridAcvtivity.this, "Facebook not Installed", Toast.LENGTH_LONG)
-                            .show();
-                }
-            }
-        });
-        line = (Button) findViewById(R.id.line);
-        line.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PackageManager pm = getPackageManager();
-                try {
-
-                    Intent waIntent = new Intent(Intent.ACTION_SEND);
-                    waIntent.setType("text/plain");
-                    String text = "Want to share this";
-
-                    PackageInfo info = pm.getPackageInfo("com.line", PackageManager.GET_META_DATA);
-                    //Check if package exists or not. If not then code
-                    //in catch block will be called
-                    waIntent.setPackage("com.line");
-                    waIntent.putExtra(waIntent.ACTION_VIEW, uri);
-                    waIntent.putExtra(Intent.EXTRA_TEXT, text);
-                    startActivity(Intent.createChooser(waIntent, "Share with"));
-
-                } catch (PackageManager.NameNotFoundException e) {
-                    Toast.makeText(GridAcvtivity.this, "Line not Installed", Toast.LENGTH_LONG)
-                            .show();
-                }
-            }
-        });*/
 
        // getDetailPost();
 

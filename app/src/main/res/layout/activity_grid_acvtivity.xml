@@ -2,31 +2,33 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.brianr.himasifmobile.GridAcvtivity"
     android:background="@drawable/bg_animation"
-    android:id="@+id/layout">
+    tools:context="com.example.brianr.himasifmobile.GridAcvtivity">
+
     <ImageView
-    android:layout_width="50dp"
-    android:layout_height="50dp"
-    android:layout_marginLeft="50dp"
-    android:layout_marginTop="23dp"
-    android:background="@mipmap/himasif1"
-        android:id="@+id/imageView2" />
+        android:id="@+id/imageView2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="23dp"
+        android:background="@mipmap/himasif1" />
+
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HIMASIF TODAY"
-        android:textSize="25dp"
         android:layout_marginLeft="110dp"
         android:layout_marginTop="30dp"
-        android:textColor="#FFF"/>
+        android:text="HIMASIF TODAY"
+        android:textColor="#FFF"
+        android:textSize="25dp" />
 
     <RelativeLayout
         android:layout_width="340dp"
-        android:layout_height="480dp"
+        android:layout_height="450dp"
         android:layout_below="@+id/imageView2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
@@ -53,69 +55,38 @@
                     android:text="judul
 asd"
                     android:textColor="#000"
-                    android:textSize="30dp" />
+                    android:textSize="27dp" />
 
                 <TextView
                     android:id="@+id/sumber"
                     android:layout_width="wrap_content"
-                    android:layout_height="20dp"
+                    android:layout_height="17dp"
                     android:layout_below="@id/judul"
                     android:text="sumber" />
 
                 <TextView
                     android:id="@+id/tanggalTerbit"
                     android:layout_width="wrap_content"
-                    android:layout_height="20dp"
+                    android:layout_height="17dp"
                     android:layout_below="@+id/sumber"
                     android:text="tanggal" />
 
                 <Button
-                    android:id="@+id/whatsapp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/tanggalTerbit"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/circle_wa" />
-
-                <Button
-                    android:id="@+id/line"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/tanggalTerbit"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_toRightOf="@id/whatsapp"
-                    android:background="@drawable/circle_wa" />
-
-                <Button
-                    android:id="@+id/facebook"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/tanggalTerbit"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_toRightOf="@id/line"
-                    android:background="@drawable/circle_fb" />
-
-                <Button
                     android:id="@+id/btnShare"
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:layout_below="@id/tanggalTerbit"
-                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
-                    android:layout_toRightOf="@id/facebook"
-                    android:text="Share" />
-                <!--<ImageView
-                    android:id="@+id/gambar"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:layout_below="@id/whastapp"/>-->
+                    android:background="@drawable/circle_button"
+                    android:drawableTop="@drawable/ic_share_black_24dp"
+                    android:paddingTop="5dp"
+                    android:translationZ="5dp" />
+
                 <WebView
                     android:id="@+id/isi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/whatsapp"
+                    android:layout_below="@id/btnShare"
                     android:layout_marginTop="10dp"
                     android:scrollbars="vertical"></WebView>
 
