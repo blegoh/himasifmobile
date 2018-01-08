@@ -28,7 +28,7 @@
 
     <RelativeLayout
         android:layout_width="340dp"
-        android:layout_height="450dp"
+        android:layout_height="490dp"
         android:layout_below="@+id/imageView2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
@@ -52,6 +52,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textStyle="bold"
                     android:text="judul
 asd"
                     android:textColor="#000"
@@ -62,6 +64,7 @@ asd"
                     android:layout_width="wrap_content"
                     android:layout_height="17dp"
                     android:layout_below="@id/judul"
+                    android:layout_marginTop="5dp"
                     android:text="sumber" />
 
                 <TextView
@@ -69,6 +72,7 @@ asd"
                     android:layout_width="wrap_content"
                     android:layout_height="17dp"
                     android:layout_below="@+id/sumber"
+                    android:layout_marginTop="5dp"
                     android:text="tanggal" />
 
                 <Button
@@ -76,7 +80,7 @@ asd"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_below="@id/tanggalTerbit"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="7dp"
                     android:background="@drawable/circle_button"
                     android:drawableTop="@drawable/ic_share_black_24dp"
                     android:paddingTop="5dp"
@@ -87,7 +91,7 @@ asd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/btnShare"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="7dp"
                     android:scrollbars="vertical"></WebView>
 
             </RelativeLayout>
