@@ -34,9 +34,9 @@ public class Random {
                 a.add(i + 1);
             }
             int num = 1;
-            Result.append("Nama Matkul\t\t\t\t\t\t\t\t\t\t\t\t : "+matkul+"\n");
-            Result.append("Jumlah Mahasiswa\t\t\t\t\t\t : " + a.size()+"\n");
-            Result.append("Jumlah Kelompok\t\t\t\t\t\t\t : " + kelompok+"\n");
+            Result.append("Nama Matkul\t\t\t\t\t\t\t\t\t : "+matkul+"\n");
+            Result.append("Jumlah Mahasiswa\t\t\t\t\t : " + a.size()+"\n");
+            Result.append("Jumlah Kelompok\t\t\t\t\t : " + kelompok+"\n");
             Result.append("Jumlah Setiap Kelompok\t : " + setiap+"\n");
             Result.append("Sisa Anggota Kelompok\t\t : " + sisa+"\n\n");
 //            Result.append("\n------------------------------\n");
