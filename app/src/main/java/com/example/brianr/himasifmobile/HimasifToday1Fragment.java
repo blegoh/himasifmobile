@@ -2,6 +2,7 @@ package com.example.brianr.himasifmobile;
 
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -10,9 +11,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -60,6 +63,31 @@ public class HimasifToday1Fragment extends Fragment {
         gridView.setAdapter(adapter);
         getPost();
         //list = new ArrayList<>();
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            model2 m = mlist.get(i);
+                Toast.makeText(getActivity(), "clicked on item "+adapter.getItemId(i)+"id post : "+m.getId(), Toast.LENGTH_SHORT).show();
+
+                String id = String.valueOf(m.getId());
+                String title = m.getTitle();
+                String isi=m.getIsi();
+                String date=m.getDate();
+                String link=m.getLink();
+
+                Intent intent = new Intent(getActivity(),GridAcvtivity.class);
+                intent.putExtra("postId",id);
+                intent.putExtra("title",title);
+                intent.putExtra("isi",isi);
+                intent.putExtra("date",date);
+                intent.putExtra("link",link);
+
+                startActivity(intent);
+
+            }
+        });
+
 
 
 
@@ -115,6 +143,10 @@ public class HimasifToday1Fragment extends Fragment {
                                 image = post.getEmbedded().getWpFeaturedmedia().get(0).getSourceUrl();
                             }
                             model2 item = new model2(post.getId(),image,Html.fromHtml(post.getTitle().getRendered()).toString());
+
+                            item.setIsi(post.getContent().getRendered());
+                            item.setDate(post.getDate());
+                            item.setLink(post.getGuid().getRendered());
                             mlist.add(item);
                         }
                         hidePDialog();

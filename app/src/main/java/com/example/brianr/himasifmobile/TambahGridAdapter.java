@@ -54,7 +54,7 @@ public class TambahGridAdapter extends BaseAdapter {
         .load(m.getImage())
         .crossFade()
         .into(image);
-        judul.setText(m.getText());
+        judul.setText(m.getTitle());
         view.setTag(m.getId());
         return view;
     }
