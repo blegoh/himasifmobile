@@ -53,11 +53,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/roboto_regular"
-                    android:textStyle="bold"
                     android:text="judul
 asd"
                     android:textColor="#000"
-                    android:textSize="27dp" />
+                    android:textSize="27dp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/sumber"
