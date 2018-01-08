@@ -12,7 +12,8 @@
     android:layout_height="50dp"
     android:layout_marginLeft="50dp"
     android:layout_marginTop="23dp"
-    android:background="@mipmap/himasif1"/>
+    android:background="@mipmap/himasif1"
+        android:id="@+id/imageView2" />
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
@@ -22,80 +23,101 @@
         android:layout_marginLeft="110dp"
         android:layout_marginTop="30dp"
         android:textColor="#FFF"/>
+
     <RelativeLayout
         android:layout_width="340dp"
-        android:layout_height="400dp"
-        android:layout_centerVertical="true"
+        android:layout_height="480dp"
+        android:layout_below="@+id/imageView2"
         android:layout_centerHorizontal="true"
-        android:paddingRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape"
         android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"
-        android:background="@drawable/shape">
+        tools:layout_editor_absoluteY="0dp">
+
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:scrollbars="vertical">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <TextView
-                    android:layout_marginTop="10dp"
+                    android:id="@+id/judul"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="#000"
-                    android:id="@+id/judul"
+                    android:layout_marginTop="10dp"
                     android:text="judul
 asd"
-                    android:textSize="30dp"/>
+                    android:textColor="#000"
+                    android:textSize="30dp" />
+
                 <TextView
                     android:id="@+id/sumber"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
                     android:layout_below="@id/judul"
-                    android:text="sumber"/>
+                    android:text="sumber" />
+
                 <TextView
+                    android:id="@+id/tanggalTerbit"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
-                    android:text="tanggal"
                     android:layout_below="@+id/sumber"
-                    android:id="@+id/tanggalTerbit"/>
+                    android:text="tanggal" />
+
                 <Button
-                    android:layout_below="@id/tanggalTerbit"
-                    android:layout_marginTop="5dp"
+                    android:id="@+id/whatsapp"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:background="@drawable/circle_wa"
-                    android:id="@+id/whastapp"/>
-                <Button
                     android:layout_below="@id/tanggalTerbit"
                     android:layout_marginTop="5dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/circle_wa"
+                    android:background="@drawable/circle_wa" />
+
+                <Button
                     android:id="@+id/line"
-                    android:layout_marginLeft="10dp"
-                    android:layout_toRightOf="@id/whastapp"/>
-                <Button
-                    android:layout_below="@id/tanggalTerbit"
-                    android:layout_marginTop="5dp"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:background="@drawable/circle_fb"
-                    android:id="@+id/facebook"
+                    android:layout_below="@id/tanggalTerbit"
                     android:layout_marginLeft="10dp"
-                    android:layout_toRightOf="@id/line"/>
-                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/whatsapp"
+                    android:background="@drawable/circle_wa" />
+
+                <Button
+                    android:id="@+id/facebook"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/tanggalTerbit"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/line"
+                    android:background="@drawable/circle_fb" />
+
+                <Button
+                    android:id="@+id/btnShare"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/tanggalTerbit"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/facebook"
+                    android:text="Share" />
+                <!--<ImageView
                     android:id="@+id/gambar"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:layout_below="@id/whastapp"/>
+                    android:layout_below="@id/whastapp"/>-->
                 <WebView
+                    android:id="@+id/isi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/content"
+                    android:layout_below="@id/whatsapp"
                     android:layout_marginTop="10dp"
-                    android:layout_below="@id/gambar">
-                </WebView>
+                    android:scrollbars="vertical"></WebView>
 
             </RelativeLayout>
         </ScrollView>
