@@ -26,14 +26,16 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="350dp"
         android:id="@+id/version"/>
+
     <ProgressBar
         android:id="@+id/progressbar"
-        android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/version"
         android:layout_centerHorizontal="true"
-        />
+        android:layout_marginTop="40dp"
+        android:progressBackgroundTint="#FFF"
+        android:progressTint="#FFF"/>
 
     <TextView
         android:layout_width="wrap_content"
