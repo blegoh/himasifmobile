@@ -3,6 +3,7 @@ package com.example.brianr.himasifmobile;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -22,7 +23,7 @@ import java.util.List;
 public class HomeFragment extends Fragment {
     private TabLayout tabLayout;
     private ViewPager viewPager;
-
+    
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

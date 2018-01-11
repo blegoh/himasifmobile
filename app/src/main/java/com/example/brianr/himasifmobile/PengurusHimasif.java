@@ -18,10 +18,14 @@ import java.util.List;
 public class PengurusHimasif extends AppCompatActivity {
     AnimationDrawable animationDrawable;
     RelativeLayout layout;
+<<<<<<< HEAD
     ViewPager viewPager;
     SliderAdapter adapter;
     Spinner spinner;
     private List<SliderAdapter> mlist = new ArrayList<SliderAdapter>();
+=======
+
+>>>>>>> upstream/master
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +36,7 @@ public class PengurusHimasif extends AppCompatActivity {
         animationDrawable.setEnterFadeDuration(4500);
         animationDrawable.setExitFadeDuration(4500);
         animationDrawable.start();
+<<<<<<< HEAD
         spinner = (Spinner)findViewById(R.id.spinner);
         ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(PengurusHimasif.this, R.array.Pengurus, android.R.layout.simple_spinner_item);
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -53,6 +58,8 @@ public class PengurusHimasif extends AppCompatActivity {
 
         adapter = new SliderAdapter(this);
         viewPager.setAdapter(adapter);
+=======
+>>>>>>> upstream/master
 
 
     }
