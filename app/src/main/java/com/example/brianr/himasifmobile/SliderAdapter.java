@@ -14,6 +14,7 @@ import android.widget.TextView;
  */
 
 public class SliderAdapter extends PagerAdapter {
+    //tes
     private int[] image_resources = {
             R.mipmap.eldi,
             R.mipmap.umroh,
