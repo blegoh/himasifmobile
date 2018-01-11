@@ -35,35 +35,14 @@
         android:paddingRight="10dp"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_marginTop="20dp"
-            android:layout_width="150dp"
+        <WebView
+            android:layout_marginTop="30dp"
+            android:layout_width="340dp"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true">
-
-        </Spinner>
-
-        <android.support.v4.view.ViewPager
-            android:id="@+id/viewPager"
-            android:layout_below="@+id/spinner"
-            android:layout_width="290dp"
-            android:layout_height="300dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp">
-
-        </android.support.v4.view.ViewPager>
-
-        <TextView
-            android:id="@+id/slide"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/viewPager"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:text="SLIDE UNTUK MELIHAT"
-            android:textSize="15dp"
-            android:textColor="#000" />
+            android:id="@+id/webview"
+            android:padding="5dp">
+            
+        </WebView>
 
     </RelativeLayout>
 
