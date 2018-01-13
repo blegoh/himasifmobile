@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 public class SliderAdapter extends PagerAdapter {
     //tes
-    private int[] image_resources = {
+/*    private int[] image_resources = {
             R.mipmap.eldi,
             R.mipmap.umroh,
             R.mipmap.eva,
@@ -52,7 +52,7 @@ public class SliderAdapter extends PagerAdapter {
             R.mipmap.meyta
 
 
-    };
+    };*/
     private String[] nama = {
             "M. Noor Dwi Eldianto",
             "Umroh Makhmudah",
@@ -134,10 +134,10 @@ public class SliderAdapter extends PagerAdapter {
         this.context = context;
     }
 
-    @Override
+   /* @Override
     public int getCount() {
         return image_resources.length;
-    }
+    }*/
 
     @Override
     public boolean isViewFromObject(View view, Object object) {
@@ -145,11 +145,16 @@ public class SliderAdapter extends PagerAdapter {
     }
 
     @Override
+    public int getCount() {
+        return 0;
+    }
+
+    @Override
     public Object instantiateItem(ViewGroup container, int position) {
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.slider, container, false);
         ImageView imageView = (ImageView) view.findViewById(R.id.slider_image);
-        imageView.setImageResource(image_resources[position]);
+       // imageView.setImageResource(image_resources[position]);
         TextView name = (TextView) view.findViewById(R.id.nama);
         name.setText(nama[position]);
         TextView jabat = (TextView) view.findViewById(R.id.jabatan);
