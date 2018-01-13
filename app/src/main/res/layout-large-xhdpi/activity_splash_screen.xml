@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash"
+    tools:context="com.example.brianr.himasifmobile.SplashScreen">
+    <ImageView
+        android:layout_width="169dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/logo"
+        android:layout_marginTop="125dp"/>
+    <ImageView
+        android:layout_width="172dp"
+        android:layout_height="139dp"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/tulisan"
+        android:layout_marginTop="320dp"/>
+    <TextView
+        android:textSize="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFF"
+        android:text="Version 1.0.0"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="550dp"
+        android:id="@+id/version"/>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/version"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:progressBackgroundTint="#FFF"
+        android:progressTint="#FFF"/>
+
+    <TextView
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:textColor="#FFF"
+        android:layout_centerHorizontal="true"
+        android:text="Copyright HIMASIF 2018"/>
+
+</RelativeLayout>

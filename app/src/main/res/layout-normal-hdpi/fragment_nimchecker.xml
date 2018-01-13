@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.brianr.himasifmobile.NimcheckerFragment">
+
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:textSize="20dp"
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:hint="Masukkan NIM / Nama"
+        app:met_floatingLabel="highlight"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"/>
+
+    <Button
+        android:id="@+id/btn_cari"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/search"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/button"
+        android:text="Cari"
+        android:textColor="#FFF" />
+
+    <ListView
+
+        android:layout_marginBottom="10dp"
+        android:id="@+id/nimchecker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_cari"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:background="#ecf0f1"
+        android:divider="#d1d1d1"
+        android:dividerHeight="10dp">
+
+    </ListView>
+
+
+</RelativeLayout>

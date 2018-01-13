@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_animation"
+    tools:context="com.example.brianr.himasifmobile.TentangKami">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="23dp"
+        android:background="@mipmap/himasif1" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="30dp"
+        android:text="TENTANG KAMI"
+        android:textColor="#FFF"
+        android:textSize="20dp" />
+
+    <RelativeLayout
+        android:layout_width="280dp"
+        android:layout_height="350dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/shape"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="13dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:lineSpacingMultiplier="1.0"
+                    android:text="Himpunan Mahasiswa Sistem Informasi (HIMASIF)
+\n\nPada tahun 2009 Program Studi Sistem Informasi merupakan program studi yang baru di Universitas Jember.
+\n\nSetelah pengenalan kehidupan kampus (PK2) pertama di PSSI terjadi, berkumpulah orang-orang yang bercita-cita PSSI memiliki sebuah Ormawa, tak peduli apapun bentuknya, BEM, HMJ, UKM, atau apapun.
+\n\nMereka adalah 7 mahasiswa angkatan 2009 yang belum saling kenal, yaitu :
+\n\n• Diksy Media F sebagai Coordinator
+\n• Ariesto Wiratama sebagai Secretary
+\n• M. Fajrul Falah sebagai Rule and Law
+\n• Hendro Agung Eko W. sebagai Graphic Designer
+\n• Aditya Yudo Sulacsono sebagai Forum Communicator
+\n• Rizqi Maulana Firdaus sebagai Member
+\n• Raditya Andre sebagai Member
+
+\n\nHal ini ternyata direspon positif oleh Sekretaris III Program Studi Sistem Informasi yaitu Bpk. Anang Andrianto.
+\n\nSehingga putusan pertama pada rapat pendiri adalah nama ormawa yaitu HIMASIF (Himpunan Mahasiswa Sistem Informasi) Program Studi Sistem Informasi pada tanggal 23 Agustus 2009 di Ruang Sidang Lt. 1 Program Studi Sistem Informasi dengan format HMJ (Himpunan Mahasiswa Jurusan) setara BEM (Badan Eksekutif Mahasiswa) mengingat masih berbentuk program studi.
+\n\nPutusan kedua yaitu hasil sidang istimewa HIMASIF pertama yang mengesahkan M. Fajrul Falah sebagai ketua HIMASIF, Dara Faradisha sebagai sekeretaris umum, dan Raditya Andre sebagai bendahara Umum hasil voting 55 mahasiswa Program Studi Sistem Informasi angkatan pertama.
+\n\nHal ini kemudian dilegalisasi dengan terbitnya surat keputusan ketua Program Studi Sistem Informasi Universitas Jember nomor 26/H25.1.15/KM.10/2009."
+
+                    android:textColor="#000000"
+                    android:fontFamily="@font/roboto_regular"/>
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>
