@@ -1,38 +1,109 @@
 package com.example.brianr.himasifmobile;
 
 import android.graphics.drawable.AnimationDrawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
+import android.widget.Toast;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Aspirasi extends AppCompatActivity {
+    private final String urlAspirasi = "http://himasif.ilkom.unej.ac.id/aspirasi/aspirasi.php?apicall=insert_aspirasi";
     AnimationDrawable animationDrawable;
     EditText aspirasi;
     RelativeLayout layout;
-    Button kirim;
-    Spinner kategori,jenis_aspirasi;
+
+    Spinner kategori, jenis_aspirasi;
+    private String pengusul, jenis_usulan, isi_usulan;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aspirasi);
-        layout = (RelativeLayout)findViewById(R.id.layout);
+        layout = (RelativeLayout) findViewById(R.id.layout);
         animationDrawable = (AnimationDrawable) layout.getBackground();
         animationDrawable.setEnterFadeDuration(4500);
         animationDrawable.setExitFadeDuration(4500);
         animationDrawable.start();
-        kategori = (Spinner)findViewById(R.id.kategori);
+        kategori = (Spinner) findViewById(R.id.kategori);
         ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(Aspirasi.this, R.array.Kategori, android.R.layout.simple_spinner_item);
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         kategori.setAdapter(adapter1);
-        jenis_aspirasi = (Spinner)findViewById(R.id.jenis_aspirasi);
+        jenis_aspirasi = (Spinner) findViewById(R.id.jenis_aspirasi);
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(Aspirasi.this, R.array.Jenis_Aspirasi, android.R.layout.simple_spinner_item);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         jenis_aspirasi.setAdapter(adapter2);
         aspirasi = (EditText) findViewById(R.id.aspirasi);
-        kirim = (Button) findViewById(R.id.kirim);
+
+    }
+
+    public void kirim(View view) {
+        pengusul = kategori.getSelectedItem().toString();
+        jenis_usulan = jenis_aspirasi.getSelectedItem().toString();
+        isi_usulan = aspirasi.getText().toString();
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, urlAspirasi,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jObj = new JSONObject(response);
+                            boolean status = jObj.getBoolean("status");
+                            if (status) {
+
+                                Toast.makeText(getApplicationContext(), "Terimakasih atas Aspirasi yang anda kirimkan", Toast.LENGTH_SHORT).show();
+                                onBackPressed();
+
+                            } else {
+
+                                String errorMsg = jObj.getString("error_msg");
+                                Toast.makeText(getApplicationContext(),
+                                        errorMsg, Toast.LENGTH_LONG).show();
+                            }
+
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            Toast.makeText(getApplicationContext(),
+                                    "Error: " + e.getMessage(),
+                                    Toast.LENGTH_LONG).show();
+                        }
+
+                    }
+
+
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(Aspirasi.this, error.toString(), Toast.LENGTH_LONG).show();
+                    }
+                }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> map = new HashMap<String, String>();
+                map.put("pengusul", pengusul);
+                map.put("jenis_usulan", jenis_usulan);
+                map.put("isi_usulan", isi_usulan);
+
+                return map;
+            }
+        };
+        AppController.getInstance().addToRequestQueue(stringRequest);
     }
 }

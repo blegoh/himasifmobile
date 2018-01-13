@@ -58,6 +58,7 @@
             android:layout_height="210dp"
             android:background="#ecf0f1" />
         <Button
+            android:onClick="kirim"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:background="@drawable/button"

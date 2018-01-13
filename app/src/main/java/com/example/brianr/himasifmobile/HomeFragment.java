@@ -37,7 +37,7 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         viewPager = (ViewPager) view.findViewById(R.id.viewContainer);
-        viewPager.setOffscreenPageLimit(3);
+        viewPager.setOffscreenPageLimit(5);
         setupViewPager(viewPager);
 
         TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tabs);

@@ -2,8 +2,12 @@ package com.example.brianr.himasifmobile;
 
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.graphics.drawable.VectorDrawableCompat;
 import android.support.v4.app.Fragment;
+import android.support.v7.content.res.AppCompatResources;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +30,7 @@ public class OtherFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_other, container, false);
+
         visimisi = (Button)view.findViewById(R.id.visimisi);
         visimisi.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +63,40 @@ public class OtherFragment extends Fragment {
                 startActivity(i);
             }
         });
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+        {
+            Drawable drawVisiMisi = AppCompatResources
+                    .getDrawable(getActivity(), R.drawable.ic_star_black_24dp);
+            Drawable drawTentangKami = AppCompatResources
+                    .getDrawable(getActivity(), R.drawable.ic_info_outline_black_24dp);
+            Drawable drawPengurus = AppCompatResources
+                    .getDrawable(getActivity(), R.drawable.ic_person_black_24dp);
+            Drawable drawAspirasi = AppCompatResources
+                    .getDrawable(getActivity(), R.drawable.ic_mode_edit_black_24dp);
+            visimisi.setCompoundDrawablesWithIntrinsicBounds(null, drawVisiMisi, null, null);
+            tentang_kami.setCompoundDrawablesWithIntrinsicBounds(null, drawTentangKami, null, null);
+            pengurus.setCompoundDrawablesWithIntrinsicBounds(null, drawPengurus, null, null);
+            aspirasi.setCompoundDrawablesWithIntrinsicBounds(null, drawAspirasi, null, null);
+
+        }
+        else
+        {
+            //Safely create our VectorDrawable on pre-L android versions.
+            Drawable drawVisiMisi = VectorDrawableCompat
+                    .create(getActivity().getResources(), R.drawable.ic_star_black_24dp, null);
+            Drawable drawTentangKami = VectorDrawableCompat
+                    .create(getActivity().getResources(), R.drawable.ic_info_outline_black_24dp, null);
+            Drawable drawPengurus = VectorDrawableCompat
+                    .create(getActivity().getResources(), R.drawable.ic_person_black_24dp, null);
+            Drawable drawAspirasi = VectorDrawableCompat
+                    .create(getActivity().getResources(), R.drawable.ic_mode_edit_black_24dp, null);
+
+            visimisi.setCompoundDrawablesWithIntrinsicBounds(null, drawVisiMisi, null, null);
+            tentang_kami.setCompoundDrawablesWithIntrinsicBounds(null, drawTentangKami, null, null);
+            pengurus.setCompoundDrawablesWithIntrinsicBounds(null, drawPengurus, null, null);
+            aspirasi.setCompoundDrawablesWithIntrinsicBounds(null, drawAspirasi, null, null);
+        }
         return view;
     }
 

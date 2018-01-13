@@ -14,7 +14,7 @@
         android:textColor="#FFF"
         android:text="VISI MISI"
         android:translationZ="10dp"
-        android:drawableTop="@drawable/ic_star_black_24dp"
+
         android:drawableTint="#FFF"/>
     <Button
         android:id="@+id/tentang_kami"
@@ -24,7 +24,7 @@
         android:layout_marginTop="70dp"
         android:layout_marginRight="10dp"
         android:layout_alignParentRight="true"
-        android:drawableTop="@drawable/ic_info_outline_black_24dp"
+
         android:drawableTint="#FFF"
         android:translationZ="10dp"
         android:paddingTop="50dp"
@@ -37,7 +37,7 @@
         android:layout_marginLeft="10dp"
         android:background="@drawable/circle_button"
         android:layout_marginTop="270dp"
-        android:drawableTop="@drawable/ic_person_black_24dp"
+
         android:drawableTint="#FFF"
         android:translationZ="10dp"
         android:paddingTop="50dp"
@@ -51,7 +51,7 @@
         android:layout_marginTop="270dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/circle_button"
-        android:drawableTop="@drawable/ic_mode_edit_black_24dp"
+
         android:drawableTint="#FFF"
         android:translationZ="10dp"
         android:paddingTop="50dp"
