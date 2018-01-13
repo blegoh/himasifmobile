@@ -5,9 +5,13 @@ import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.AnimationDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.graphics.drawable.VectorDrawableCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.content.res.AppCompatResources;
 import android.util.Log;
 import android.view.View;
 import android.webkit.WebSettings;
@@ -75,6 +79,20 @@ public class GridAcvtivity extends AppCompatActivity {
         animationDrawable.setEnterFadeDuration(4500);
         animationDrawable.setExitFadeDuration(4500);
         animationDrawable.start();
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+        {
+            Drawable leftDrawable = AppCompatResources
+                    .getDrawable(this, R.drawable.ic_share_black_24dp);
+            btnShare.setCompoundDrawablesWithIntrinsicBounds(leftDrawable, null, null, null);
+        }
+        else
+        {
+            //Safely create our VectorDrawable on pre-L android versions.
+            Drawable leftDrawable = VectorDrawableCompat
+                    .create(this.getResources(), R.drawable.ic_share_black_24dp, null);
+            btnShare.setCompoundDrawablesWithIntrinsicBounds(leftDrawable, null, null, null);
+        }
 
         btnShare.setOnClickListener(new View.OnClickListener() {
             @Override
