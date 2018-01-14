@@ -28,8 +28,8 @@ public class Aspirasi extends AppCompatActivity {
     EditText aspirasi;
     RelativeLayout layout;
 
-    Spinner kategori, jenis_aspirasi;
-    private String pengusul, jenis_usulan, isi_usulan;
+    Spinner kategori;
+    private String pengusul,  isi_usulan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,17 +44,12 @@ public class Aspirasi extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(Aspirasi.this, R.array.Kategori, android.R.layout.simple_spinner_item);
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         kategori.setAdapter(adapter1);
-        jenis_aspirasi = (Spinner) findViewById(R.id.jenis_aspirasi);
-        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(Aspirasi.this, R.array.Jenis_Aspirasi, android.R.layout.simple_spinner_item);
-        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        jenis_aspirasi.setAdapter(adapter2);
         aspirasi = (EditText) findViewById(R.id.aspirasi);
 
     }
 
     public void kirim(View view) {
         pengusul = kategori.getSelectedItem().toString();
-        jenis_usulan = jenis_aspirasi.getSelectedItem().toString();
         isi_usulan = aspirasi.getText().toString();
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, urlAspirasi,
@@ -98,7 +93,6 @@ public class Aspirasi extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> map = new HashMap<String, String>();
                 map.put("pengusul", pengusul);
-                map.put("jenis_usulan", jenis_usulan);
                 map.put("isi_usulan", isi_usulan);
 
                 return map;
