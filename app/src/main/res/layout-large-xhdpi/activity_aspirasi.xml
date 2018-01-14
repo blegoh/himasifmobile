@@ -33,20 +33,10 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp"
         android:background="@drawable/shape">
-        <Spinner
-            android:layout_marginTop="30dp"
-            android:id="@+id/kategori"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true">
-
-        </Spinner>
-
 
         <EditText
-            android:layout_below="@id/kategori"
             android:id="@+id/aspirasi"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="400dp"
             android:background="#ecf0f1" />

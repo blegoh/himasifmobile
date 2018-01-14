@@ -27,8 +27,6 @@ public class Aspirasi extends AppCompatActivity {
     AnimationDrawable animationDrawable;
     EditText aspirasi;
     RelativeLayout layout;
-
-    Spinner kategori;
     private String pengusul,  isi_usulan;
 
     @Override
@@ -40,16 +38,11 @@ public class Aspirasi extends AppCompatActivity {
         animationDrawable.setEnterFadeDuration(4500);
         animationDrawable.setExitFadeDuration(4500);
         animationDrawable.start();
-        kategori = (Spinner) findViewById(R.id.kategori);
-        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(Aspirasi.this, R.array.Kategori, android.R.layout.simple_spinner_item);
-        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        kategori.setAdapter(adapter1);
         aspirasi = (EditText) findViewById(R.id.aspirasi);
 
     }
 
     public void kirim(View view) {
-        pengusul = kategori.getSelectedItem().toString();
         isi_usulan = aspirasi.getText().toString();
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, urlAspirasi,
@@ -92,7 +85,6 @@ public class Aspirasi extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> map = new HashMap<String, String>();
-                map.put("pengusul", pengusul);
                 map.put("isi_usulan", isi_usulan);
 
                 return map;
