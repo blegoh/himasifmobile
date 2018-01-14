@@ -38,7 +38,7 @@ public class HimasifToday5Fragment extends Fragment {
     private GridView gridView;
     private TambahGridAdapter adapter;
     private List<model2> mlist = new ArrayList<model2>();
-    private final String urlHimasif = "";
+    private final String urlHimasif = "http://himasif.ilkom.unej.ac.id//wp-json/wp/v2/posts?_embed&categories=125";
 
 
     List<Post> list;
