@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.brianr.himasifmobile.HimasifToday3Fragment">
+    tools:context="com.example.brianr.himasifmobile.HimasifToday3Fragment"
+    android:background="#ecf0f1">
 
     <GridView
         android:layout_marginTop="10dp"
