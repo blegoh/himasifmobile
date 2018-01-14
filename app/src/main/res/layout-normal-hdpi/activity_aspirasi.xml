@@ -33,29 +33,20 @@
         tools:layout_editor_absoluteY="0dp"
         android:background="@drawable/shape">
         <Spinner
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:id="@+id/kategori"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true">
 
         </Spinner>
-        <Spinner
-            android:layout_marginTop="20dp"
-            android:id="@+id/jenis_aspirasi"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/kategori">
-
-        </Spinner>
 
         <EditText
-            android:layout_below="@id/jenis_aspirasi"
+            android:layout_below="@id/kategori"
             android:id="@+id/aspirasi"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="200dp"
             android:background="#ecf0f1" />
         <Button
             android:onClick="kirim"
