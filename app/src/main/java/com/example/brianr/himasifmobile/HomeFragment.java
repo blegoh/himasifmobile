@@ -50,8 +50,8 @@ public class HomeFragment extends Fragment {
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
         adapter.addFragment(new HimasifToday1Fragment(), "All");
-        adapter.addFragment(new HimasifToday2Fragment(), "Event");
-        adapter.addFragment(new HimasifToday3Fragment(), "Kampusku");
+        adapter.addFragment(new HimasifToday2Fragment(), "Kampusku");
+        adapter.addFragment(new HimasifToday3Fragment(), "Events");
         adapter.addFragment(new HimasifToday4Fragment(), "Tentang Alumni");
         adapter.addFragment(new HimasifToday5Fragment(), "Tech-World");
         viewPager.setAdapter(adapter);
