@@ -43,7 +43,7 @@
                     android:ems="10"
                     android:hint="Jumlah Mahasiswa"
                     android:inputType="number|numberSigned"
-                    android:maxLength="9"
+                    android:maxLength="3"
                     app:met_floatingLabel="highlight" />
 
                 <com.rengwuxian.materialedittext.MaterialEditText
@@ -56,7 +56,7 @@
                     android:ems="10"
                     android:hint="Jumlah Kelompok"
                     android:inputType="number"
-                    android:maxLength="9"
+                    android:maxLength="3"
                     app:met_floatingLabel="highlight" />
 
                 <com.rengwuxian.materialedittext.MaterialEditText
@@ -69,7 +69,7 @@
                     android:ems="10"
                     android:hint="Jumlah Anggota"
                     android:inputType="number"
-                    android:maxLength="9"
+                    android:maxLength="3"
                     app:met_floatingLabel="highlight" />
 
                 <com.rengwuxian.materialedittext.MaterialEditText
