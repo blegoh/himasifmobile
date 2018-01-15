@@ -54,7 +54,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tercapainya pendidikan yang kompeten terutama dibidang IPTEK yang didasari tanggungjawab dan sikap profesionalisme serta menyatukan 3 potensi dasar kepemjmpinan pemuda yaitu intelektual, spiritual, dan jasad sehingga menjadi mahasiswa yang bertaqwa kepada Tuhan YME."
+                    android:text="Tercapainya pendidikan yang kompeten terutama dibidang IPTEK yang didasari tanggungjawab dan sikap profesionalisme serta menyatukan 3 potensi dasar kepemimpinan pemuda yaitu intelektual, spiritual, dan jasad sehingga menjadi mahasiswa yang bertaqwa kepada Tuhan YME."
                     android:layout_centerHorizontal="true"
                     android:textAlignment="center"
                     android:textColor="#000000"
@@ -78,7 +78,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="
-            \n1. Mengadakan kegiatan kemahasiswaan yang berrujuan jntuk mengembangkan ipteks
+            \n1. Mengadakan kegiatan kemahasiswaan yang bertujuan untuk mengembangkan ipteks
             \n2. Meningkatkan kualitas sumberdaya manusia di bidang akademik dan non akademik
             \n3. Memperkenalkan Program Studi Sistem Informasi di lingkungan masyarakat luas
             \n4. Menjalin hubungan dan kerjasama atas dasar kekeluargaan dengan orang di dalam atau diluar fakultas
