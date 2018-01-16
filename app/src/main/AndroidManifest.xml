@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.brianr.himasifmobile">
+    package="id.ilkom.himasif.himasifmobile">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <supports-screens
@@ -23,7 +23,7 @@
     </compatible-screens>
 
     <application
-        android:name=".AppController"
+        android:name="id.ilkom.himasif.himasifmobile.AppController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -31,10 +31,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="id.ilkom.himasif.himasifmobile.MainActivity"
             android:label="@string/app_name" />
         <activity
-            android:name=".SplashScreen"
+            android:name="id.ilkom.himasif.himasifmobile.SplashScreen"
             android:noHistory="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -43,13 +43,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ResultRandom" />
-        <activity android:name=".Aspirasi" />
-        <activity android:name=".PengurusHimasif" />
-        <activity android:name=".VisiMisi" />
-        <activity android:name=".TentangKami" />
-        <activity android:name=".GridAcvtivity" />
-        <service android:name=".HimasifNotification">
+        <activity android:name="id.ilkom.himasif.himasifmobile.ResultRandom" />
+        <activity android:name="id.ilkom.himasif.himasifmobile.Aspirasi" />
+        <activity android:name="id.ilkom.himasif.himasifmobile.PengurusHimasif" />
+        <activity android:name="id.ilkom.himasif.himasifmobile.VisiMisi" />
+        <activity android:name="id.ilkom.himasif.himasifmobile.TentangKami" />
+        <activity android:name="id.ilkom.himasif.himasifmobile.GridAcvtivity" />
+        <service android:name="id.ilkom.himasif.himasifmobile.HimasifNotification">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
