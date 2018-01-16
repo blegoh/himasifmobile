@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1050208415833",
+    "firebase_url": "https://himasifmobilenotif.firebaseio.com",
+    "project_id": "himasifmobilenotif",
+    "storage_bucket": "himasifmobilenotif.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1050208415833:android:ac51dee1d702a046",
+        "android_client_info": {
+          "package_name": "com.example.brianr.himasifmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1050208415833-t3u374scipan5rqnoov355lr4bnqnjov.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_ME-q3t7fgYUNRdQ392nCi6d6gxzCnWA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
