@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "1050208415833",
-    "firebase_url": "https://himasifmobilenotif.firebaseio.com",
-    "project_id": "himasifmobilenotif",
-    "storage_bucket": "himasifmobilenotif.appspot.com"
+    "project_number": "505807518946",
+    "firebase_url": "https://himasifnotif.firebaseio.com",
+    "project_id": "himasifnotif",
+    "storage_bucket": "himasifnotif.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1050208415833:android:ac51dee1d702a046",
+        "mobilesdk_app_id": "1:505807518946:android:04fa7ef4816855d0",
         "android_client_info": {
-          "package_name": "com.example.brianr.himasifmobile"
+          "package_name": "id.ilkom.himasif.himasifmobile"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1050208415833-t3u374scipan5rqnoov355lr4bnqnjov.apps.googleusercontent.com",
+          "client_id": "505807518946-9j1jvaiv20b22i3sq4hdi69oaoam7tl3.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB_ME-q3t7fgYUNRdQ392nCi6d6gxzCnWA"
+          "current_key": "AIzaSyCpM-Nq6u8ttP4RYv7DQdvqaPap5A1aLd4"
         }
       ],
       "services": {

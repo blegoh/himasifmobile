@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.brianr.himasifmobile.RandomFragment">
+    tools:context="com.example.brianr.himasifmobile.id.example.brianr.himasifmobile.RandomFragment">
 
     <ScrollView
         android:layout_alignParentTop="true"
