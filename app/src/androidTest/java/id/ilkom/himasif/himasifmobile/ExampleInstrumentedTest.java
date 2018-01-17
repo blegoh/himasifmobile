@@ -1,4 +1,4 @@
-package com.example.brianr.himasifmobile;
+package id.ilkom.himasif.himasifmobile;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
