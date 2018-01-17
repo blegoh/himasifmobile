@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.webkit.WebView;
 import android.widget.RelativeLayout;
 
-import com.example.brianr.himasifmobile.R;
+
 
 public class PengurusHimasif extends AppCompatActivity {
     AnimationDrawable animationDrawable;

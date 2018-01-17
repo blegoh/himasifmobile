@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.brianr.himasifmobile.id.example.brianr.himasifmobile.HimasifToday1Fragment"
+    android:background="#ecf0f1">
+
+    <GridView
+        android:layout_marginTop="10dp"
+        android:id="@+id/grid1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numColumns="2"
+        android:horizontalSpacing="2dp"
+        android:verticalSpacing="5dp"
+        android:columnWidth="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:stretchMode="spacingWidthUniform"
+        android:paddingBottom="10dp">
+
+    </GridView>
+
+
+</LinearLayout>

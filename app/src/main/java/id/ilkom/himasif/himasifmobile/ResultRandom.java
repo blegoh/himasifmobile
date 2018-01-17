@@ -10,7 +10,6 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.example.brianr.himasifmobile.R;
 
 public class ResultRandom extends AppCompatActivity {
     AnimationDrawable animationDrawable;

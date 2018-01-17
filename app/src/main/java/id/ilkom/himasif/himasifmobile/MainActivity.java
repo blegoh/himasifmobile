@@ -12,7 +12,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.brianr.himasifmobile.R;
+
 
 import me.anwarshahriar.calligrapher.Calligrapher;
 

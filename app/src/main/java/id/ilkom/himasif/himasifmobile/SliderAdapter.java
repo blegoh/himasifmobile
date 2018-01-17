@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.brianr.himasifmobile.R;
+
 
 /**
  * Created by Brian R on 04/01/2018.

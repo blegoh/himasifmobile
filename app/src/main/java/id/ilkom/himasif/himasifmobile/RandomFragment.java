@@ -13,7 +13,6 @@ import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.Toast;
 
-import com.example.brianr.himasifmobile.R;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 

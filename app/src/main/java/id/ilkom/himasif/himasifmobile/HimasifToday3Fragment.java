@@ -20,7 +20,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
-import com.example.brianr.himasifmobile.R;
 
 import id.ilkom.himasif.himasifmobile.models.wp.Post;
 import com.google.gson.Gson;

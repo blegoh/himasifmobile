@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Handler;
 import android.os.Bundle;
 
-import com.example.brianr.himasifmobile.R;
 
 public class SplashScreen extends Activity {
     private static int splashInterval = 2000;

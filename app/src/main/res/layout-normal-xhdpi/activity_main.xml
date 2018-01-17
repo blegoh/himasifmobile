@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_animation"
+    tools:context="com.example.brianr.himasifmobile.id.example.brianr.himasifmobile.MainActivity">
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="23dp"
+        android:background="@mipmap/himasif1"/>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HIMASIF MOBILE"
+        android:textSize="25dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="30dp"
+        android:textColor="#FFF"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/fragment"
+            android:layout_width="340dp"
+            android:layout_height="485dp"
+            android:layout_marginTop="80dp"
+            android:layout_centerHorizontal="true"
+
+            android:background="@drawable/shape">
+
+        </RelativeLayout>
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="?android:attr/windowBackground"
+            app:menu="@menu/navigation" />
+
+    </RelativeLayout>
+</RelativeLayout>

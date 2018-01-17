@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_animation"
-
     tools:context=".Aspirasi"
-
     android:id="@+id/layout">
     <ImageView
         android:layout_width="50dp"
@@ -21,12 +19,12 @@
         android:layout_height="wrap_content"
         android:text="ASPIRASI"
         android:textSize="25dp"
-        android:layout_marginLeft="130dp"
+        android:layout_marginLeft="150dp"
         android:layout_marginTop="30dp"
         android:textColor="#FFF"/>
     <RelativeLayout
-        android:layout_width="280dp"
-        android:layout_height="350dp"
+        android:layout_width="340dp"
+        android:layout_height="400dp"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:layout_centerVertical="true"
@@ -38,12 +36,12 @@
             android:id="@+id/aspirasi"
             android:layout_marginTop="50dp"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="230dp"
             android:background="#ecf0f1" />
         <Button
             android:onClick="kirim"
-            android:layout_width="150dp"
-            android:layout_height="40dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/button"
             android:text="KIRIM"
             android:textColor="#FFF"

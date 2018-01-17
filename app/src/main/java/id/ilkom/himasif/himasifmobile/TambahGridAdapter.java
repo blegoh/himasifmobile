@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.brianr.himasifmobile.R;
+
 
 import java.util.List;
 
