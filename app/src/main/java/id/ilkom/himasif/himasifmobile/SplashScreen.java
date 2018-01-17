@@ -6,7 +6,6 @@ import android.os.Handler;
 import android.os.Bundle;
 
 
-
 public class SplashScreen extends Activity {
     private static int splashInterval = 2000;
     @Override

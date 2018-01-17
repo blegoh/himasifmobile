@@ -11,7 +11,6 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 
-
 public class ResultRandom extends AppCompatActivity {
     AnimationDrawable animationDrawable;
     RelativeLayout layout;
