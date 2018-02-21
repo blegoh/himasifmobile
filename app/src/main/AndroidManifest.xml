@@ -7,27 +7,57 @@
         android:largeScreens="true"
         android:normalScreens="true"
         android:smallScreens="true"
-        android:xlargeScreens="true"/>
+        android:xlargeScreens="true" />
 
     <compatible-screens>
         <!-- all small size screens -->
-        <screen android:screenSize="small" android:screenDensity="ldpi" />
-        <screen android:screenSize="small" android:screenDensity="mdpi" />
-        <screen android:screenSize="small" android:screenDensity="hdpi" />
-        <screen android:screenSize="small" android:screenDensity="xhdpi" />
+        <screen
+            android:screenDensity="ldpi"
+            android:screenSize="small" />
+        <screen
+            android:screenDensity="mdpi"
+            android:screenSize="small" />
+        <screen
+            android:screenDensity="hdpi"
+            android:screenSize="small" />
+        <screen
+            android:screenDensity="xhdpi"
+            android:screenSize="small" />
         <!-- all normal size screens -->
-        <screen android:screenSize="normal" android:screenDensity="ldpi" />
-        <screen android:screenSize="normal" android:screenDensity="mdpi" />
-        <screen android:screenSize="normal" android:screenDensity="hdpi" />
-        <screen android:screenSize="normal" android:screenDensity="xhdpi" />
-        <screen android:screenSize="normal" android:screenDensity="xxhdpi"/>
-        <screen android:screenSize="normal" android:screenDensity="xxxhdpi"/>
+        <screen
+            android:screenDensity="ldpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="mdpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="hdpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="xhdpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="xxhdpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="xxxhdpi"
+            android:screenSize="normal" />
 
-        <screen android:screenSize="large" android:screenDensity="ldpi" />
-        <screen android:screenSize="large" android:screenDensity="mdpi" />
-        <screen android:screenSize="large" android:screenDensity="hdpi" />
-        <screen android:screenSize="large" android:screenDensity="xhdpi" />
-        <screen android:screenSize="large" android:screenDensity="xxhdpi"/>
+        <screen
+            android:screenDensity="ldpi"
+            android:screenSize="large" />
+        <screen
+            android:screenDensity="mdpi"
+            android:screenSize="large" />
+        <screen
+            android:screenDensity="hdpi"
+            android:screenSize="large" />
+        <screen
+            android:screenDensity="xhdpi"
+            android:screenSize="large" />
+        <screen
+            android:screenDensity="xxhdpi"
+            android:screenSize="large" />
     </compatible-screens>
 
     <application
@@ -54,12 +84,16 @@
         <activity android:name="id.ilkom.himasif.himasifmobile.ResultRandom" />
         <activity android:name="id.ilkom.himasif.himasifmobile.Aspirasi" />
         <activity android:name="id.ilkom.himasif.himasifmobile.PengurusHimasif" />
-        <activity android:name="id.ilkom.himasif.himasifmobile.VisiMisi" />
+        <activity
+            android:name="id.ilkom.himasif.himasifmobile.VisiMisi"
+            android:parentActivityName=".MainActivity" />
+
         <activity android:name="id.ilkom.himasif.himasifmobile.TentangKami" />
         <activity android:name="id.ilkom.himasif.himasifmobile.GridAcvtivity" />
+
         <service android:name="id.ilkom.himasif.himasifmobile.HimasifNotification">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
     </application>

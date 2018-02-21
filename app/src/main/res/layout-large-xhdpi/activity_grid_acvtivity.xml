@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_animation"
-    tools:context="com.example.brianr.himasifmobile.id.example.brianr.himasifmobile.GridAcvtivity">
+    tools:context=".GridAcvtivity">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -29,12 +29,11 @@
     <RelativeLayout
         android:layout_marginTop="40dp"
         android:layout_below="@+id/title"
-        android:layout_width="550dp"
-        android:layout_height="650dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/shape"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:background="#FFF"
+        android:padding="10dp"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 

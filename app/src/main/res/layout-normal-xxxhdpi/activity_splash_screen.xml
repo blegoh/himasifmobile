@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash"
+    tools:context=".SplashScreen">
+    <ImageView
+        android:layout_width="119dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/logo"
+        android:layout_marginTop="125dp"
+        android:id="@+id/logo"/>
+    <ImageView
+        android:layout_below="@id/logo"
+        android:layout_width="122dp"
+        android:layout_height="89dp"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/tulisan"
+        android:id="@+id/tulisanLogo"/>
+    <TextView
+        android:layout_below="@id/tulisanLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFF"
+        android:text="Version 1.0.0"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:id="@+id/version"/>
+
+    <ProgressBar
+        android:indeterminateTint="#FFF"
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/version"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:progressBackgroundTint="#FFF"
+        android:progressTint="#FFF"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:textColor="#FFF"
+        android:layout_centerHorizontal="true"
+        android:textSize="15dp"
+        android:text="Copyright HIMASIF 2018"/>
+
+</RelativeLayout>

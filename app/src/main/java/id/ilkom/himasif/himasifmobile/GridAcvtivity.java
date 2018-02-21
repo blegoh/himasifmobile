@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.content.res.AppCompatResources;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.RelativeLayout;
@@ -58,6 +59,8 @@ public class GridAcvtivity extends AppCompatActivity {
 
 
         isi=(WebView)findViewById(R.id.isi);
+        WebSettings webSettings = isi.getSettings();
+        webSettings.setJavaScriptEnabled(true);
         judul=(TextView)findViewById(R.id.judul);
         tanggal=(TextView)findViewById(R.id.tanggalTerbit);
         sumber=(TextView)findViewById(R.id.sumber);
@@ -71,6 +74,7 @@ public class GridAcvtivity extends AppCompatActivity {
         tanggal.setText(date);
         sumber.setText(link);
         isi.loadDataWithBaseURL(null,"<style>img{display: inline;height: auto;max-width: 100%;}</style>"+content.toString(),"text/html","UTF-8",null);
+
 
 
         animationDrawable = (AnimationDrawable) layout.getBackground();

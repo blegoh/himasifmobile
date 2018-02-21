@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    tools:context=".Aspirasi">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/app_bar_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/appBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Tulis Kritik dan Saranmu"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="25dp" />
+
+            <EditText
+                android:id="@+id/aspirasi"
+                android:layout_below="@id/title"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_marginTop="50dp"
+                android:background="#ecf0f1" />
+
+            <Button
+                android:id="@+id/kirim"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/aspirasi"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button"
+                android:onClick="kirim"
+                android:text="KIRIM"
+                android:textColor="#FFF" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -46,7 +46,6 @@ public class NimcheckerFragment extends Fragment {
     private List<model>models;
     private Button btnCari;
     private MaterialEditText search;
-
     public NimcheckerFragment() {
         // Required empty public constructor
     }
@@ -58,6 +57,7 @@ public class NimcheckerFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_nimchecker, container, false);
         btnCari=(Button)view.findViewById(R.id.btn_cari);
         search=(MaterialEditText) view.findViewById(R.id.search);
+        search.setText("");
         search.requestFocus();
 
         btnCari.setOnClickListener(new View.OnClickListener() {

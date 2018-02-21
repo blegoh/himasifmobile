@@ -5,45 +5,35 @@
     android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_animation"
-    tools:context="com.example.brianr.himasifmobile.id.example.brianr.himasifmobile.PengurusHimasif">
+    android:background="#FFF"
+    tools:context=".PengurusHimasif">
 
-    <ImageView
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="25dp"
-        android:background="@mipmap/himasif1" />
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/app_bar_layout" />
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="90dp"
-        android:layout_marginTop="35dp"
-        android:text="PENGURUS HIMASIF"
-        android:textColor="#FFF"
-        android:textSize="20dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/appBar">
 
-    <RelativeLayout
-        android:layout_width="280dp"
-        android:layout_height="350dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:background="@drawable/shape"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
-        <WebView
-            android:layout_marginTop="30dp"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/webview"
-            android:padding="5dp">
-            
-        </WebView>
+            android:layout_height="match_parent"
+            android:padding="10dp">
 
-    </RelativeLayout>
+            <WebView
+                android:id="@+id/webview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="5dp">
+
+            </WebView>
+
+        </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>
