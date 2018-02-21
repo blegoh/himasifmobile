@@ -2,89 +2,80 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.brianr.himasifmobile.id.example.brianr.himasifmobile.ResultRandom"
     android:background="@drawable/bg_animation"
-    android:id="@+id/layout">
+    tools:context=".ResultRandom">
+
     <ImageView
+        android:id="@+id/himasif"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="23dp"
-        android:background="@mipmap/himasif1"/>
+        android:background="@mipmap/himasif1" />
+
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HASIL RANDOM"
-        android:textSize="50dp"
         android:layout_marginLeft="180dp"
         android:layout_marginTop="50dp"
-        android:textColor="#FFF"/>
-    <RelativeLayout
-        android:id="@+id/layouttt"
-        android:layout_marginTop="40dp"
-        android:layout_below="@+id/title"
-        android:layout_width="550dp"
-        android:layout_height="600dp"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:layout_centerHorizontal="true"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"
-        android:background="@drawable/shape">
+        android:text="HASIL RANDOM"
+        android:textColor="#FFF"
+        android:textSize="50dp" />
 
-        <ScrollView
-            android:id="@+id/scroll_view"
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/himasif"
+        android:layout_marginTop="10dp"
+        android:background="#fff">
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentTop="true">
+            android:background="#FFF"
+            android:padding="10dp">
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/textView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_marginTop="10dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="10dp">
-
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@android:color/black"
-                    android:textSize="20dp"/>
-
-            </LinearLayout>
-        </ScrollView>
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
 
 
-    </RelativeLayout>
-    <Button
-        android:layout_alignParentLeft="true"
-        android:layout_below="@id/layouttt"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="20dp"
-        android:id="@+id/re_random"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:background="@drawable/button"
-        android:textColor="#FFF"
-        android:textSize="27dp"
-        android:text="Re-random" />
+            <Button
+                android:id="@+id/re_random"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/textView"
+                android:layout_marginBottom="17dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button"
+                android:text="Re-random"
+                android:textColor="#FFF"
+                android:textSize="27dp" />
 
-    <Button
-        android:layout_below="@id/layouttt"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="20dp"
-        android:id="@+id/share_but"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:textSize="27dp"
-        android:background="@drawable/button"
-        android:textColor="#FFF"
-        android:layout_alignParentRight="true"
-        android:text="Share" />
+            <Button
+                android:id="@+id/share_but"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textView"
+                android:layout_marginBottom="17dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button"
+                android:text="Share"
+                android:textColor="#FFF"
+                android:textSize="27dp" />
 
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

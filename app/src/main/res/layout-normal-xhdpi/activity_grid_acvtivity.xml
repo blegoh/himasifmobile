@@ -27,14 +27,13 @@
         android:textSize="25dp" />
 
     <RelativeLayout
-        android:layout_width="340dp"
-        android:layout_height="490dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_below="@+id/imageView2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:background="@drawable/shape"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:background="#FFF"
+        android:padding="10dp"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 

@@ -1,29 +1,41 @@
 package id.ilkom.himasif.himasifmobile;
 
+import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.preference.Preference;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.animation.FastOutSlowInInterpolator;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
+import com.getkeepsafe.taptargetview.TapTarget;
+import com.getkeepsafe.taptargetview.TapTargetSequence;
+import com.getkeepsafe.taptargetview.TapTargetView;
 
 import me.anwarshahriar.calligrapher.Calligrapher;
+
 
 public class MainActivity extends AppCompatActivity {
     AnimationDrawable animationDrawable;
     Animation frombottom;
     RelativeLayout layout, fragment;
     TextView textView;
-
-    Fragment home,random,other,nim;
-
+    Fragment home, random, other, nim;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -74,12 +86,13 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
-            if(fragment!=null)
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment,fragment).commit();
-            return fragment!=null;
+            if (fragment != null)
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment, fragment).commit();
+            return fragment != null;
         }
     };
 
+    @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -100,10 +113,51 @@ public class MainActivity extends AppCompatActivity {
         animationDrawable.setEnterFadeDuration(4500);
         animationDrawable.setExitFadeDuration(4500);
         animationDrawable.start();
+        if (PreferencesApp.isFirstLaunch()) {
+
+            final TapTargetSequence sequence = new TapTargetSequence(this)
+                    .targets(
+                            TapTarget.forView(findViewById(R.id.navigation_home), "This is himasif today", "Click if you want").outerCircleColor(R.color.colorPrimary).id(1),
+                            TapTarget.forView(findViewById(R.id.navigation_nimchecker), "This is nimchecker", "Click if you want").outerCircleColor(R.color.colorPrimary).id(2),
+                            TapTarget.forView(findViewById(R.id.navigation_random), "This is random", "Click if you want").outerCircleColor(R.color.colorPrimary).id(3),
+                            TapTarget.forView(findViewById(R.id.navigation_other), "This is other", "Click if you want").outerCircleColor(R.color.colorPrimary).id(4))
+                    .listener(new TapTargetSequence.Listener() {
+                        @Override
+                        public void onSequenceFinish() {
+                            PreferencesApp.hasFirstLaunch();
+                        }
+
+                        @Override
+                        public void onSequenceStep(TapTarget lastTarget, boolean targetClicked) {
+                            Log.d("Tap TargetView", "Clicked on" + lastTarget.id());
+                        }
+
+                        @Override
+                        public void onSequenceCanceled(TapTarget lastTarget) {
+                            final AlertDialog dialog = new AlertDialog.Builder(MainActivity.this)
+                                    .setTitle("Uh oh")
+                                    .setMessage("You canceled the sequence")
+                                    .setPositiveButton("Oops", null).show();
+                            TapTargetView.showFor(dialog,
+                                    TapTarget.forView(dialog.getButton(DialogInterface.BUTTON_POSITIVE), "Uh oh!", "You canceled the sequence at step " + lastTarget.id())
+                                            .cancelable(false)
+                                            .tintTarget(false), new TapTargetView.Listener() {
+                                        @Override
+                                        public void onTargetClick(TapTargetView view) {
+                                            super.onTargetClick(view);
+                                            dialog.dismiss();
+                                        }
+                                    });
+                        }
+                    });
+            sequence.start();
+        }
+
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         BottomNavigationViewHelper.disableShiftMode(navigation);
 
     }
+
 
 }

@@ -2,56 +2,58 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_animation"
-    tools:context="com.example.brianr.himasifmobile.id.example.brianr.himasifmobile.Aspirasi"
-    android:id="@+id/layout">
-    <ImageView
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="50dp"
-        android:background="@mipmap/himasif1"/>
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ASPIRASI"
-        android:textSize="60dp"
-        android:layout_marginLeft="230dp"
-        android:layout_marginTop="70dp"
-        android:textColor="#FFF"/>
-    <RelativeLayout
-        android:layout_marginTop="40dp"
-        android:layout_below="@+id/title"
-        android:layout_width="550dp"
-        android:layout_height="600dp"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:layout_centerHorizontal="true"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"
-        android:background="@drawable/shape">
+    android:background="#FFF"
+    tools:context=".Aspirasi">
 
-        <EditText
-            android:id="@+id/aspirasi"
-            android:layout_marginTop="50dp"
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/app_bar_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/appBar">
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:background="#ecf0f1" />
-        <Button
-            android:onClick="kirim"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button"
-            android:text="KIRIM"
-            android:textSize="20dp"
-            android:textColor="#FFF"
-            android:layout_below="@id/aspirasi"
-            android:layout_marginTop="20dp"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/kirim"/>
-    </RelativeLayout>
+            android:layout_height="match_parent"
+            android:padding="10dp">
 
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Tulis Kritik dan Saranmu"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="40dp" />
+
+            <EditText
+                android:id="@+id/aspirasi"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_below="@id/title"
+                android:layout_marginTop="50dp"
+                android:background="#ecf0f1" />
+
+            <Button
+                android:id="@+id/kirim"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/aspirasi"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/button"
+                android:onClick="kirim"
+                android:text="KIRIM"
+                android:textColor="#FFF"
+                android:textSize="20dp" />
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

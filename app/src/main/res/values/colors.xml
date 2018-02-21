@@ -3,4 +3,5 @@
     <color name="colorPrimary">#F6D365</color>
     <color name="colorPrimaryDark">#F6D365</color>
     <color name="colorAccent">#FDA085</color>
+    <color name="lightgray">#ededed</color>
 </resources>

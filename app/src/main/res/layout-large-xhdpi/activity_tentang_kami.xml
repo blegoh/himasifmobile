@@ -5,54 +5,40 @@
     android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_animation"
-    tools:context="com.example.brianr.himasifmobile.id.example.brianr.himasifmobile.TentangKami">
+    android:background="#FFF"
+    tools:context=".TentangKami">
 
-    <ImageView
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="50dp"
-        android:background="@mipmap/himasif1" />
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/app_bar_layout" />
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="180dp"
-        android:layout_marginTop="75dp"
-        android:text="TENTANG KAMI"
-        android:textColor="#FFF"
-        android:textSize="50dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/appBar">
 
-    <RelativeLayout
-        android:layout_marginTop="50dp"
-        android:layout_below="@+id/title"
-        android:layout_width="550dp"
-        android:layout_height="600dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:background="@drawable/shape"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
-
-        <ScrollView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="10dp">
 
-            <RelativeLayout
+            <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <TextView
-                    android:textSize="25dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:lineSpacingMultiplier="1.0"
-                    android:text="Himpunan Mahasiswa Sistem Informasi (HIMASIF)
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:lineSpacingMultiplier="1.0"
+                        android:text="Himpunan Mahasiswa Sistem Informasi (HIMASIF)
 \n\nPada tahun 2009 Program Studi Sistem Informasi merupakan program studi yang baru di Universitas Jember.
 \n\nSetelah pengenalan kehidupan kampus (PK2) pertama di PSSI terjadi, berkumpulah orang-orang yang bercita-cita PSSI memiliki sebuah Ormawa, tak peduli apapun bentuknya, BEM, HMJ, UKM, atau apapun.
 \n\nMereka adalah 7 mahasiswa angkatan 2009 yang belum saling kenal, yaitu :
@@ -69,11 +55,11 @@
 \n\nPutusan kedua yaitu hasil sidang istimewa HIMASIF pertama yang mengesahkan M. Fajrul Falah sebagai ketua HIMASIF, Dara Faradisha sebagai sekeretaris umum, dan Raditya Andre sebagai bendahara Umum hasil voting 55 mahasiswa Program Studi Sistem Informasi angkatan pertama.
 \n\nHal ini kemudian dilegalisasi dengan terbitnya surat keputusan ketua Program Studi Sistem Informasi Universitas Jember nomor 26/H25.1.15/KM.10/2009."
 
-                    android:textColor="#000000"
-                    android:fontFamily="@font/roboto_regular"/>
+                        android:textColor="#000000"
+                        android:textSize="25dp" />
 
-            </RelativeLayout>
-        </ScrollView>
-    </RelativeLayout>
-
+                </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

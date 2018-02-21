@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.brianr.himasifmobile.id.example.brianr.himasifmobile.NimcheckerFragment">
+    tools:context=".NimcheckerFragment"
+    android:padding="10dp">
 
 
     <com.rengwuxian.materialedittext.MaterialEditText
@@ -16,6 +17,7 @@
         android:hint="Masukkan NIM / Nama"
         app:met_floatingLabel="highlight"
         android:paddingLeft="7dp"
+        android:text=""
         android:paddingRight="7dp"/>
 
     <Button

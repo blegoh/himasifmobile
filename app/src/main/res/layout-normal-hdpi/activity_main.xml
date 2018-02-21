@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_animation"
-    tools:context="com.example.brianr.himasifmobile.id.example.brianr.himasifmobile.MainActivity">
+    tools:context=".MainActivity">
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -27,12 +27,12 @@
         android:layout_height="match_parent">
         <RelativeLayout
             android:id="@+id/fragment"
-            android:layout_width="290dp"
-            android:layout_height="380dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/navigation"
             android:layout_marginTop="80dp"
             android:layout_centerHorizontal="true"
-
-            android:background="@drawable/shape">
+            android:background="#FFF">
 
         </RelativeLayout>
         <android.support.design.widget.BottomNavigationView

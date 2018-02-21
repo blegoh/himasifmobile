@@ -2,99 +2,75 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.brianr.himasifmobile.id.example.brianr.himasifmobile.VisiMisi"
-    android:background="@drawable/bg_animation"
-    android:id="@+id/layout">
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="23dp"
-        android:background="@mipmap/himasif1"/>
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="VISI MISI"
-        android:textSize="25dp"
-        android:layout_marginLeft="140dp"
-        android:layout_marginTop="30dp"
-        android:textColor="#FFF"/>
-    <RelativeLayout
-        android:layout_width="340dp"
-        android:layout_height="400dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:paddingRight="10dp"
-        android:paddingLeft="10dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"
-        android:background="@drawable/shape">
-        <ScrollView
+    tools:context=".VisiMisi">
+    <include layout="@layout/app_bar_layout" android:id="@+id/appBar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/appBar">
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="10dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="VISI HIMASIF"
-                    android:textSize="20dp"
-                    android:layout_centerHorizontal="true"
-                    android:textColor="#000000"
-                    android:textStyle="bold"
-                    android:layout_marginTop="20dp"
-                    android:lineSpacingMultiplier="1.2"
-                    android:fontFamily="@font/roboto_regular"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_regular"
+                android:lineSpacingMultiplier="1.2"
+                android:text="VISI HIMASIF"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tercapainya pendidikan yang kompeten terutama dibidang IPTEK yang didasari tanggungjawab dan sikap profesionalisme serta menyatukan 3 potensi dasar kepemimpinan pemuda yaitu intelektual, spiritual, dan jasad sehingga menjadi mahasiswa yang bertaqwa kepada Tuhan YME."
-                    android:layout_centerHorizontal="true"
-                    android:textAlignment="center"
-                    android:textColor="#000000"
-                    android:layout_marginTop="70dp"
-                    android:lineSpacingMultiplier="1.2"
-                    android:fontFamily="@font/roboto_regular"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="70dp"
+                android:fontFamily="@font/roboto_regular"
+                android:lineSpacingMultiplier="1.2"
+                android:text="Tercapainya pendidikan yang kompeten terutama dibidang IPTEK yang didasari tanggung jawab dan sikap profesionalisme serta menjadi sarana untuk mengambangkan potensi diri mahasiswa."
+                android:textAlignment="center"
+                android:textColor="#000000" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="MISI HIMASIF"
-                    android:textSize="20dp"
-                    android:layout_centerHorizontal="true"
-                    android:textColor="#000000"
-                    android:textStyle="bold"
-                    android:layout_marginTop="220dp"
-                    android:lineSpacingMultiplier="1.2"
-                    android:fontFamily="@font/roboto_regular"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="210dp"
+                android:fontFamily="@font/roboto_regular"
+                android:lineSpacingMultiplier="1.2"
+                android:text="MISI HIMASIF"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="
-            \n1. Mengadakan kegiatan kemahasiswaan yang bertujuan untuk mengembangkan ipteks
-            \n2. Meningkatkan kualitas sumberdaya manusia di bidang akademik dan non akademik
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="230dp"
+                android:fontFamily="@font/roboto_regular"
+                android:lineSpacingMultiplier="1.2"
+                android:text="\n1. Mengadakan kegiatan yang bertujuan untuk mengembangkan IPTEK
+            \n2. Meningkatkan kualitas sumberdaya manusia di bidang akademis,kewirausahaan,dan keprofesian
             \n3. Memperkenalkan Program Studi Sistem Informasi di lingkungan masyarakat luas
-            \n4. Menjalin hubungan dan kerjasama atas dasar kekeluargaan dengan orang di dalam atau diluar fakultas
-            \n5. Melaksanakan setiap kegiatan dengan disiplin konsisten dan bertanggung jawab
-            \n6. Menyelenggarakan kegiatan sosial yang berasaskan ketuhanan YME
-            \n7. Mempererat tali persaudaraan antar mahasiswa khususnya mahasiswa Sistem Informasi"
-                    android:layout_centerHorizontal="true"
-                    android:textColor="#000000"
-                    android:layout_marginTop="230dp"
-                    android:lineSpacingMultiplier="1.2"
-                    android:layout_marginBottom="10dp"
-                    android:fontFamily="@font/roboto_regular"/>
+            \n4. Menjalin hubungan dan kerjasama atas dasar kekeluargaan dengan organisasi di dalam atau di luar Program Studi Sistem Informasi
+            \n5. Melaksanakan setiap kegiatan dengan berlandaskan kedisiplinan dan Kekonsistenan
+            \n6. Mempererat tali persaudaraan antar mahasiswa khususnya anggota HIMASIF"
+                android:textColor="#000000" />
 
-            </RelativeLayout>
-        </ScrollView>
-
-    </RelativeLayout>
-
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>
