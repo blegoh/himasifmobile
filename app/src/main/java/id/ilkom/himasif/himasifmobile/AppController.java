@@ -4,6 +4,8 @@ package id.ilkom.himasif.himasifmobile;
  * Created by eldi on 23/02/2017.
  */
 import android.app.Application;
+import android.content.Context;
+import android.support.multidex.MultiDex;
 import android.text.TextUtils;
 
 import com.android.volley.Request;
@@ -25,6 +27,12 @@ public class AppController extends Application {
         super.onCreate();
         mInstance = this;
         PreferencesApp.initPreferences(this);
+
+    }
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
     }
 
     public static synchronized AppController getInstance() {

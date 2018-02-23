@@ -109,10 +109,10 @@ public class MainActivity extends AppCompatActivity {
         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fragment, homeFragment);
         fragmentTransaction.commit();
-        animationDrawable = (AnimationDrawable) layout.getBackground();
-        animationDrawable.setEnterFadeDuration(4500);
-        animationDrawable.setExitFadeDuration(4500);
-        animationDrawable.start();
+//        animationDrawable = (AnimationDrawable) layout.getBackground();
+//        animationDrawable.setEnterFadeDuration(4500);
+//        animationDrawable.setExitFadeDuration(4500);
+//        animationDrawable.start();
         if (PreferencesApp.isFirstLaunch()) {
 
             final TapTargetSequence sequence = new TapTargetSequence(this)
