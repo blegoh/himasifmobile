@@ -77,10 +77,10 @@ public class GridAcvtivity extends AppCompatActivity {
 
 
 
-        animationDrawable = (AnimationDrawable) layout.getBackground();
-        animationDrawable.setEnterFadeDuration(4500);
-        animationDrawable.setExitFadeDuration(4500);
-        animationDrawable.start();
+//        animationDrawable = (AnimationDrawable) layout.getBackground();
+//        animationDrawable.setEnterFadeDuration(4500);
+//        animationDrawable.setExitFadeDuration(4500);
+//        animationDrawable.start();
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
         {
