@@ -13,7 +13,7 @@
         android:numColumns="2"
         android:horizontalSpacing="2dp"
         android:verticalSpacing="5dp"
-        android:columnWidth="175dp"
+        android:columnWidth="205dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:stretchMode="spacingWidthUniform"
