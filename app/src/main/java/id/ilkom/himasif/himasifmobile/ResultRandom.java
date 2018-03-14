@@ -25,11 +25,11 @@ public class ResultRandom extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_random);
-        layout = (RelativeLayout)findViewById(R.id.layout);
-        animationDrawable = (AnimationDrawable) layout.getBackground();
-        animationDrawable.setEnterFadeDuration(4500);
-        animationDrawable.setExitFadeDuration(4500);
-        animationDrawable.start();
+//        layout = (RelativeLayout)findViewById(R.id.layout);
+//        animationDrawable = (AnimationDrawable) layout.getBackground();
+//        animationDrawable.setEnterFadeDuration(4500);
+//        animationDrawable.setExitFadeDuration(4500);
+//        animationDrawable.start();
 
         Intent i = getIntent();
         Bundle EXTRA = i.getExtras();
