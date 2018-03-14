@@ -117,10 +117,10 @@ public class MainActivity extends AppCompatActivity {
 
             final TapTargetSequence sequence = new TapTargetSequence(this)
                     .targets(
-                            TapTarget.forView(findViewById(R.id.navigation_home), "This is himasif today", "Click if you want").outerCircleColor(R.color.colorPrimary).id(1),
-                            TapTarget.forView(findViewById(R.id.navigation_nimchecker), "This is nimchecker", "Click if you want").outerCircleColor(R.color.colorPrimary).id(2),
-                            TapTarget.forView(findViewById(R.id.navigation_random), "This is random", "Click if you want").outerCircleColor(R.color.colorPrimary).id(3),
-                            TapTarget.forView(findViewById(R.id.navigation_other), "This is other", "Click if you want").outerCircleColor(R.color.colorPrimary).id(4))
+                            TapTarget.forView(findViewById(R.id.navigation_home), "HIMASIF TODAY", "Dapatkan semua berita tentang kampus, event, \nalumni, dan teknologi dunia").outerCircleColor(R.color.colorPrimary).id(1),
+                            TapTarget.forView(findViewById(R.id.navigation_nimchecker), "NIMCHECKER", "Anda dapat dengan mudah menemukan\nNama dan NIM teman anda").outerCircleColor(R.color.colorPrimary).id(2),
+                            TapTarget.forView(findViewById(R.id.navigation_random), "RANDOM", "Permudah diri dan teman anda dalam menentukan\nkelompok berdasarkan jumlah mahasiswa,\nkelompok dan anggota").outerCircleColor(R.color.colorPrimary).id(3),
+                            TapTarget.forView(findViewById(R.id.navigation_other), "OTHER", "Temukan apa saja visi misi, tentang kami, pengurus HIMASIF,\n dan anda juga dapat menyampaikan kritik dan saran disini").outerCircleColor(R.color.colorPrimary).id(4))
                     .listener(new TapTargetSequence.Listener() {
                         @Override
                         public void onSequenceFinish() {
